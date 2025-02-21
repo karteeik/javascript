@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var n;
+        n=prompt("enter n : ");
+        if(n>0){
+            document.getElementById("demo").innerHTML=n+" is positive number";
+        }else if(n<0){
+            document.getElementById("demo").innerHTML=n+" is negative number";
+        }else{
+            document.getElementById("demo").innerHTML=n+" is zero";
+        }
+    </script>
+</body>
+</html>

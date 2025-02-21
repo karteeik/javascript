@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+       <form name="form1" action="" onsubmit="fun_one()">
+        <label for="fname">Enter Name : </label>
+        <input type="text" name="fname"> <br> <br>
+
+        <label for="pass_word">Password : </label>
+        <input type="password" name="pass_word"> <br> <br>
+
+        <input type="submit" value="Submit">
+       </form>
+    </div>
+       <script lang="javascript">
+        function fun_one(){
+            name=document.form1.fname.value;
+            password=document.form1.pass_word.value;
+
+            if(name==""){
+                alert("name is required");
+                return false;
+            }
+
+            if(password==""){
+                alert("password is required");
+                return false;
+            }
+        }
+       </script>
+        
+   
+</body>
+</html>

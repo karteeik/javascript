@@ -1,0 +1,36 @@
+// concatenation in javascript
+// "+" operator used to join two string
+
+// type coercion
+// (1)implicit(automatically)-uses of operator
+// (2)explicit(by programmer)-uses of function
+
+// some quiz
+console.log("java"+"script")
+console.log("java"-"script") //Nan
+console.log(16+4+"java")
+console.log(true+true)
+console.log(true+false)
+console.log(false-true)
+console.log(true-false)
+console.log(""+0)
+console.log(""+"")
+console.log(9-"5")
+console.log(10+9+"john")
+console.log("34"-6)
+console.log("34"+6)  //implicit
+
+
+// let num = 123;
+// let str = String(num);  
+// console.log(str)  //explicit
+
+let str = "123";
+let num = Number(str);  // 123
+let float = parseFloat("123.45");  // 123.45
+let int = parseInt("123", 10);  // explicit
+
+console.log(null == undefined);  // true
+console.log('0' == 0);  // true
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p id="demo"></p>
+    <script>
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toString();
+    </script> -->
+
+    <!-- <p id="demo1"></p>
+    <script>
+      const d1 = new Date();
+      document.getElementById("demo1").innerHTML = d1.toUTCString();
+    </script> -->
+
+    <!-- <p id="demo2"></p>
+    <script>
+      const d2 = new Date();
+      document.getElementById("demo2").innerHTML = d2.toDateString();
+    </script> -->
+
+    <form name="form1" method="post" onsubmit="form_validation();">
+      student name:<input type="text" name="uname" />
+      <br />
+      password:<input type="password" name="pass_word" />
+      <br />
+      <input type="submit" value="submit" />
+    </form>
+
+    <script lang="javascript">
+      function form_validation()
+      {
+       name=document.form1.uname.value;
+       password=document.form1.pass_word.value;
+       if(name=="")
+       {
+      alert("name is required");
+       return false;
+       }
+       if(password=="")
+       {
+      alert("please enter password");
+       return false;
+      }
+      }
+    </script>
+  </body>
+</html>

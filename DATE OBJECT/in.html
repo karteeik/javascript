@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="form1" method="post" onsubmit="return form_validation()">
+      <label for="uname">name : </label>
+      <input type="text" name="uname" /><br /><br />
+      <label for="pass_word">password : </label>
+      <input type="password" name="pass_word" /><br /><br />
+      <button type="submit" value="submit">submit</button>
+    </form>
+    <script lang="javascript">
+      function form_validation(){
+          name=document.form1.uname.value;
+          password=document.form1.pass_word.value;
+          if(name==""){
+              alert("plz name daal");
+              return false;
+          }
+          if(password==""){
+              alert("fggsd");
+              return false;
+          }
+      }
+    </script>
+  </body>
+</html>

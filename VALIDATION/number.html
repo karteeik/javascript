@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="no">Enter Number : </label>
+    <input type="text" id="no"> <br><br>
+    <button type="submit" onclick="fun_one()">Submit</button>
+
+    <script lang="javascript">
+        function fun_one(){
+            no=document.getElementById("no").value;
+            if(isNaN(no)){
+                alert("is not number");
+            }
+            else{
+                alert("is number");
+            }
+        }
+    </script>
+
+</body>
+</html>
