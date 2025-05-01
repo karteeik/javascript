@@ -33,6 +33,7 @@ console.log(a)
 
 let b=100;
     b=1000;
+    b=423432;
 console.log(b)
 
 // (3)-(const) keyword
@@ -43,8 +44,3 @@ console.log(b)
 const c=230;
 // const c=23;
 console.log(c)
-
-// templete string (`)symbol name is backticks
-let str1="john";
-let str2="due";
-console.log(`hello my name is ${str1} and my surname is ${str2}`);

@@ -21,7 +21,7 @@ console.log(john)
 
 // (5)-null
 var a=null
-console.log(typeof a)
+console.log(typeof a)   //return object -its bug 
 
 // (6)-BigInt
 var a=100000000000000000000000000000000000000000000000000000000000000n;
@@ -38,13 +38,13 @@ console.log(typeof a)
 
 // how to convert string to number
 // var Name="john";
-// console.log(typeof +Name)
+// console.log(typeof Name)
 // console.log(typeof Number(Name))
 
 // how to convert number to string
-// var Age=30;
-// console.log(typeof (Age+""))
-// console.log(typeof String(Age))
+var Age=30;
+console.log(typeof (Age+""))
+console.log(typeof String(Age))
 
 // parseint()
 // const myInt="210";
@@ -58,18 +58,18 @@ console.log(typeof a)
 // console.log(typeof myNume)
 
 // parsefloat
-// const myOne="23.4";
-// const mytwo=parseFloat(myOne)
-// console.log(mytwo)
+const myOne="23.4";
+const mytwo=parseFloat(myOne)
+console.log(mytwo)
 
 // extra example
 // console.log("extra parseint example")
-// console.log(parseInt("098"))
-// console.log(parseInt("-234"))
-// console.log(parseInt("&263"))
-// console.log(parseInt("xyz"))
-// console.log(parseInt("  897"))
-// console.log(parseInt("213er"))
+console.log(parseInt("098"))
+console.log(parseInt("-234"))
+console.log(parseInt("&263"))
+console.log(parseInt("xyz"))
+console.log(parseInt("  897"))
+console.log(parseInt("213er"))
 
 // Nan-not a number
 console.log(parseInt("xyz")==parseInt("#$%"))  //false

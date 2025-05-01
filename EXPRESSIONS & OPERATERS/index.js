@@ -1,4 +1,4 @@
-// 5 + 15 -5 and 15 are operand, '+' is operator and (5+15) are expression
+// 5 + 15 - 5 and 15 are operand, '+' is operator and (5+15) are expression
 // there are many types of operator in javascript
 // (1) assignment operator
 // when we initialize var then use (=) operator

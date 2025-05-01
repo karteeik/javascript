@@ -30,3 +30,16 @@ console.log(text.lastIndexOf("satyam",15));
 // console.log(Array.from(text));
 
 
+// templete string (`)symbol name is backticks
+
+// You can embed variables or expressions using ${...}:
+let str1="john";
+let str2="due";
+console.log(`hello my name is ${str1} and my surname is ${str2}`)   //variables
+
+let a=10;
+let b=20;
+console.log(`sum is : ${a+b}`)  //expressions
+
+let num=5;
+console.log(`5 * ${num} = ${5 * num}`);

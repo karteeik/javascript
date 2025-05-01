@@ -7,43 +7,50 @@
 // console.log(Array.isArray(players))
 
 // (2)array literal
-// const fruits=['apple','banana','cherry'];
-// console.log(fruits)
+const fruits=['apple','banana','cherry'];
+console.log(fruits)
+
 // accessing elements
-// console.log(fruits[2])
+console.log(fruits[2])
+
 // modifying elements
-// fruits[2]="mango";
-// console.log(fruits[2])
+fruits[2]="mango";
+console.log(fruits[2])
 
 // (3)an empty array
-// const group=[];
-// console.log(typeof group);
+const group=[];
+console.log(typeof group);
 
 // for 0f loop , also known as iterable
 let frds=["raj","mohan","rahul","pavan","madhur"];
 // normal loop
 
-// for (i=0; i<frds.length; i++)
-//     console.log(frds[i]);
+for (i=0; i<frds.length; i++)
+    console.log(frds[i]);
 
 // for of loop - it return values
-// for(let i of frds)
-//     console.log(i);
+for(let i of frds)
+    console.log(i);
 
 // for in loop - it return index 
-// for(let i in frds)
-//     console.log(i,frds[i]);
+for(let i in frds)
+    console.log(i,frds[i]);
 
 // foreach method - with index method
-// arr.foreach(()=>{});
-// frds.forEach(function(currentele,index){
-//     console.log(`${currentele} ${index}`)
+// arr.foreach(function(cur_value,index,array){
+//      //logic here
 // });
 
-// fetch arrow uses
-// frds.forEach((currentele,index)=>{
-//     console.log(`${currentele} ${index}`)
-// });
+let frdsw=["raj","mohan","rahul","pavan","madhur"];
+frdsw.forEach(function(currentele,index,arr){
+    console.log(`${currentele} ${index}`)
+});
+
+// fat arrow uses
+//arr.forEach
+frdsw.forEach((currentele,index,arr)=>{
+    console.log(`${currentele} ${index}`)
+});
 
 // const myForeach=frds.forEach((currentele,index,frds)=>{
 //     return `${currentele} ${index}`;
@@ -102,4 +109,3 @@ console.log(nummbers.includes(3,2));
 // (3)lastindexof(searchElement)- it returns last reapeted index
 console.log(nummbers.indexOf(4))
 console.log(nummbers.lastIndexOf(4));
-

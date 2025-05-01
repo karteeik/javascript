@@ -1,2 +1,2 @@
-// alert('External javascript') 
+alert('External javascript') 
 console.log('hello world');

@@ -15,22 +15,22 @@
 // A function expression involves creating a function and assigning it to a variable. This function can be anonymous (without a name) or named.
 
 // (1)named function
-// let result=function sum(a,b){ 
+// let result = function sum(a,b){
 //     console.log(a+b);
 // };
 // result(2,3);
 
-// (2)anonymous function expression
+// (2)anonymous function expression - noName of function store in one variable
 // let show=function(a,b){
 //     console.log(a+b);
 // };
 // show(2,3);
 
 // default parameter
-function sum(a,b=10){  //default parameter          
-    console.log(a+b);
-}
-sum(5,15);
+// function sum(a,b=10){  //default parameter          
+//     console.log(a+b);
+// }
+// sum(5,15);
 
 // IIFE - (immedately invoked function expression)
 
@@ -39,23 +39,45 @@ sum(5,15);
 //     console.log("hello world");
 // })();
 
-// var result=(function(a,b){
-//     console.log(a+b);
-//     return a+b;
-// })(10,10);
-// console.log("the result is : "+result)
+// (function(){
+//     console.log("hello, world");
+// })();
+
+// let result=(function(){
+//     console.log("hello, world");
+//     return "hello, world";  //if you return string than it store in function expression
+// })();
+// console.log(result)
+
+(function(a,b){
+    console.log(a+b);
+})(61,26);
+
+let show=(function(a,b){
+    return a+b;
+})(12,32);
+
+console.log(show);
 
 // fat arrow function
 // syntax- const functionName = (parameter1, parameter2, ...) => {
     // Function body
 // };
 
-
-// const result=(a,b)=>{
-//     console.log(a+b);
-// };
-// result(10,20);
+// (i) - you don't need to write function keyword
+const select = (a,b) => {
+    console.log(a+b);
+};
+select(21,23);
 
 // it's one line function
-const result=(a,b)=>`${a} and ${b} sum is ${a+b}`;
-console.log(result(2,33));
+// const result=(a,b)=>`${a} and ${b} sum is ${a+b}`;
+// console.log(result(2,33));
+
+// (ii) - if you passed one parameter in fat arrow function than no need to show parentheses()
+const sqr = a =>{ console.log(`sqr is ${a*a}`) };
+sqr(10);
+
+//(iii) - if you have passed no argument than only show parentheses()
+const greet = () => {console.log("hello, world")};
+greet();

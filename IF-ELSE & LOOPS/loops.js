@@ -14,6 +14,14 @@
 //     i++;
 // }while(i<0);
 
+// let userInput;
+// let positiveNumber;
+// do{
+//     userInput=prompt("enter any positive number");
+//     positiveNumber=parseFloat(userInput);
+// }while(isNaN(positiveNumber) || positiveNumber < 0)
+// console.log(positiveNumber)
+
 // for loop
 var n=10;
 debugger;
