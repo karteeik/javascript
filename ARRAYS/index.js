@@ -153,3 +153,7 @@ let selectProduct=6;
 const result=products.filter(currentele=> currentele!=selectProduct );
 console.log(result);
 
+//sort() method
+console.log(products.sort());
+
+// const sortArray=products.sort(())
