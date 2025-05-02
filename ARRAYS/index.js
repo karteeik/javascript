@@ -42,27 +42,30 @@ for(let i in frds)
 // });
 
 let frdsw=["raj","mohan","rahul","pavan","madhur"];
-frdsw.forEach(function(currentele,index,arr){
-    console.log(`${currentele} ${index}`)
-});
+// frdsw.forEach(function(currentele,index,arr){
+//     console.log(`${currentele} ${index}`)
+// });
 
 // fat arrow uses
-//arr.forEach
+//arr.forEach((cur_value,index,array)=>{
+//      //logic here
+// });
 frdsw.forEach((currentele,index,arr)=>{
-    console.log(`${currentele} ${index}`)
+    // console.log(`${currentele} ${index}`)
+    console.log(arr);
 });
 
-// const myForeach=frds.forEach((currentele,index,frds)=>{
-//     return `${currentele} ${index}`;
-// });
-// console.log(myForeach);  //indefined then use map method
+const myForeach=frdsw.forEach((currentele,index,frds)=>{
+    return `${currentele} ${index}`;
+});
+console.log(myForeach);  //indefined then use map method
 
-// map method - save array in one variable
-// const myMap=frds.map((currentele,index,frds)=>{
-//     // return `${currentele} ${index}`;
-//     return frds;
-// });
-// console.log(myMap);
+// map method - save array in one variable and creat new array
+const myMap=frdsw.map((currentele,index,arr)=>{
+    // return frdsw;
+    return `${currentele} ${index}`
+});
+console.log(myMap);
 
 // let numbers=[1,2,3,4,5];
 // // example of foreach method
@@ -75,24 +78,25 @@ frdsw.forEach((currentele,index,arr)=>{
 // })
 // console.log(myMap);
 
-// const myMethod=["gita","sita","mira","rina","jaya"];
+const myMethod=["gita","sita","mira","rina","jaya"];
 // // how to insert/add/replace and delete elements in array
 
 // // (1)- push() method : add one & more element to the end in array
 // myMethod.push("priya");
-// console.log(myMethod);
+console.log(myMethod.push("priya"));    //return new length of an array
+console.log(myMethod);
 
 // // (2)- pop() method : remove last inserted element in array
-// myMethod.pop()
-// console.log(myMethod)
+myMethod.pop();
+console.log(myMethod)
 
 // // (3)- unshift() method : add one & more element to the beggining of array
-// myMethod.unshift("karina");
-// console.log(myMethod);
+myMethod.unshift("karina");
+console.log(myMethod);
 
 // // (4)- shift() method : remove first element in array
-// myMethod.shift()
-// console.log(myMethod);
+myMethod.shift();
+console.log(myMethod);
 
 // (5)- splice() method : instants method of an array removing,replcing,adding
 // syntax - splice(start_index,delete_count,iteams)
@@ -105,7 +109,7 @@ frdsw.forEach((currentele,index,arr)=>{
 const nummbers=[1,2,3,4,5,6,4,8]
 console.log(nummbers.indexOf(4)) //3
 // (2)includes(searchElemenet,fromIndex-(search where to start)) -it returns element is exists or not.
-console.log(nummbers.includes(3,2));
+console.log(nummbers.includes(4,3));
 // (3)lastindexof(searchElement)- it returns last reapeted index
 console.log(nummbers.indexOf(4))
-console.log(nummbers.lastIndexOf(4));
+console.log(nummbers.lastIndexOf(4,5)); 
