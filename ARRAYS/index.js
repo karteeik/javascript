@@ -174,3 +174,18 @@ console.log(isSort);
 const numbers = [10, 5, 40, 25];
 numbers.sort();
 console.log(numbers); // [10, 25, 40, 5] — not numerically correct!
+
+// compare function (oneline code)
+// for ascending
+
+//Initial array: [30, 5, 10]
+//Compare 30 and 5 → 30 - 5 = 25 → positive → swap → becomes [5, 30, 10]
+
+//Compare 30 and 10 → 30 - 10 = 20 → positive → swap → becomes [5, 10, 30]
+
+numbers.sort((a,b)=>a-b);   
+console.log(numbers);
+
+// for descending
+numbers.sort((a,b)=>b-a);
+console.log(numbers);
