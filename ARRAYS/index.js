@@ -153,7 +153,24 @@ let selectProduct=6;
 const result=products.filter(currentele=> currentele!=selectProduct );
 console.log(result);
 
-//sort() method
-console.log(products.sort());
 
-// const sortArray=products.sort(())
+// how to sort and compare an array
+//sort() method - it return only asscending order
+const isSort=[5,23,61,3,2,7,9,1];
+console.log(isSort.sort());     //multiple digit is not correct
+
+//then use thiss
+isSort.sort((a,b)=>{
+    // if (a>b) return 1;  //switch the order
+    // if (b>a) return -1;     //keep the order
+
+    //for descending order
+    if (a>b) return -1;
+    if (b>a) return 1;
+});
+
+console.log(isSort);
+
+const numbers = [10, 5, 40, 25];
+numbers.sort();
+console.log(numbers); // [10, 25, 40, 5] — not numerically correct!
