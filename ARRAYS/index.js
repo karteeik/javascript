@@ -189,3 +189,27 @@ console.log(numbers);
 // for descending
 numbers.sort((a,b)=>b-a);
 console.log(numbers);
+
+//reduce method in an array
+// The .reduce() method in JavaScript is used to reduce an array to a single value by executing a callback function on each element of the array.
+
+// syntax - array.reduce((accumulator, currentValue, index, array) => {
+                    // return new accumulator
+//          }, initialValue);
+
+// accumulator: stores the result of the previous computation.
+
+// currentValue: the current element being processed.
+
+// initialValue (optional but recommended): the initial value for the accumulator.
+
+//find sum
+const product = [1, 2, 3, 4, 5];
+const sum = product.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 15
+
+
+//find max
+const nums = [10, 20, 5, 40];
+const max = nums.reduce((acc, curr) => curr > acc ? curr : acc, nums[0]);
+console.log(max); // 40
