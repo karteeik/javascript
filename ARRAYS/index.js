@@ -213,3 +213,7 @@ console.log(sum); // 15
 const nums = [10, 20, 5, 40];
 const max = nums.reduce((acc, curr) => curr > acc ? curr : acc, nums[0]);
 console.log(max); // 40
+
+// .reduce() does not mutate the original array.
+
+// Always provide an initialValue unless you're sure the array has at least one item.git 
