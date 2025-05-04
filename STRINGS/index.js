@@ -45,8 +45,8 @@ console.log(greeting);
 
 // string Methods
 
-let firstString = "har har mahadev     ";
-console.log(firstString.length);   //21 (including space)
+let firstString = "har, har, mahadev     ";
+console.log(firstString.length);   //(including space)
 
 console.log(firstString.toLowerCase());
 
@@ -78,6 +78,7 @@ console.log(firstString.substring(1,5));
 console.log(firstString.replace("mahadev","shambhu"));
 
 // Converts string to array
+console.log(firstString.split(","));
 
 // Repeats the string (n) times
 
