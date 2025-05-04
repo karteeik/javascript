@@ -68,11 +68,17 @@ console.log(firstString.startsWith("ha"));
 console.log(firstString.endsWith("  "));   //end with some spaces
 
 //Finds the index of a substring
-
 //Extracts part of a string
+console.log(firstString.slice(1,5));
+
 //Similar to slice but doesn't allow negative indexes
+console.log(firstString.substring(1,5));
+
 //Replaces part of the string
+console.log(firstString.replace("mahadev","shambhu"));
+
 // Converts string to array
+
 // Repeats the string (n) times
 
 // searching element
