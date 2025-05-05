@@ -8,6 +8,17 @@ console.log(typeof str2)    //string
 // Accessing Charactors
 console.log(str1[0]);   // j
 
+// string are immutable you can't change characters directly
+let str = "hello";
+str[0] = "H"; //Doesn't work
+console.log(str);
+str = "Hello"; //Reassigning works
+console.log(str);
+
+// looping over string
+for(let char of str){
+    console.log(char);
+}
 
 // // escape charactor 
 // // (/')- for single quote
@@ -17,7 +28,11 @@ console.log(str1[0]);   // j
 const str01="hello, my name is \'ram\'";
 console.log(str01);
 
-const str02="hello, my name is \"ram \" ";
+let str02="hello, my name is \"ram \" ";
+console.log(str02);
+
+// or other method
+str02='hello, my name is "ram"';    //opposite single quote
 console.log(str02);
 
 const str03="hello, my name is \\ ram ";
@@ -67,7 +82,6 @@ console.log(firstString.startsWith("ha"));
 //Checks if string ends with substring
 console.log(firstString.endsWith("  "));   //end with some spaces
 
-//Finds the index of a substring
 //Extracts part of a string
 console.log(firstString.slice(1,5));
 
@@ -81,16 +95,24 @@ console.log(firstString.replace("mahadev","shambhu"));
 console.log(firstString.split(","));
 
 // Repeats the string (n) times
+console.log(firstString.repeat(2));
 
-// searching element
+// searching element 
+
+// - Finds the index of a substring
 // indexof(searchstring)
 // indexof(searchstring,position)
 const text="satyam shivam satyam sundaram";
 console.log(text.indexOf("sundaram",1));
 
+// it's similar to indexOf(), but it searches from the end of the string.
 // lastindexof(searchstring)
 // lastindexof(searchstring,position)
-console.log(text.lastIndexOf("satyam",15));
+let str = "banana";
+console.log(str.lastIndexOf("n"));
+console.log(str.lastIndexOf("a", 4)); // 3
+// It searches backward from index 4
+//The last "a" before index 4 is at index 3
 
 // array.from()
 // console.log(Array.from(text));
