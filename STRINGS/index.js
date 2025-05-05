@@ -63,41 +63,48 @@ console.log(greeting);
 let firstString = "har, har, mahadev     ";
 console.log(firstString.length);   //(including space)
 
-console.log(firstString.toLowerCase());
+// charat() method - it returns the character at a specific position
+console.log(firstString.charAt(2));
+console.log(firstString.charAt(-7));    //not allow negative index
 
+// charcodeat() method - it returns  the code of the character at a specified index in a string
+// The method returns a UTF-16 code (an integer between 0 and 65535).
+console.log(firstString.charCodeAt(1));
+
+// at() method - it returns the character at a specific position
+console.log(firstString.at(2));
+console.log(firstString.at(-7));
+
+console.log(firstString.toLowerCase());
 console.log(firstString.toUpperCase());
 
-//Removes leading/trailing spaces
+//trim() method - Removes leading/trailing spaces
 let cleanstr = firstString.trim();
 console.log(cleanstr);
 console.log(firstString.trimStart());
 console.log(firstString.trimEnd());
 
-//Checks if substring exists - return boolean value
-console.log(firstString.includes("aha"));
-
-//Checks if string starts with substring - return boolean value
-console.log(firstString.startsWith("ha"));
-
-//Checks if string ends with substring
-console.log(firstString.endsWith("  "));   //end with some spaces
-
-//Extracts part of a string
+//slice() method - Extracts part of a string
+console.log(firstString.slice(5));
 console.log(firstString.slice(1,5));
+console.log(firstString.slice(-9)); //backword string allow negative counts
 
-//Similar to slice but doesn't allow negative indexes
+//substring() method - Similar to slice but doesn't allow negative indexes
+console.log(firstString.substring(2));
 console.log(firstString.substring(1,5));
+console.log(firstString.substring(-11));  //not work negative numbers
+console.log(firstString.substring(13,5));  // If start > end, it automatically swaps them
 
-//Replaces part of the string
+//replace() method - Replaces part of the string
 console.log(firstString.replace("mahadev","shambhu"));
 
-// Converts string to array
+//split() method - Converts string to array
 console.log(firstString.split(","));
 
-// Repeats the string (n) times
+//repeat() method - Repeats the string (n) times
 console.log(firstString.repeat(2));
 
-// searching element 
+// searching element methods in string
 
 // - Finds the index of a substring
 // indexof(searchstring)
@@ -156,14 +163,45 @@ console.log(numString.search(/\d+/g));  //10  / \d+ (one and more digits) /
 
 // in short search string without case censitive
 
-// match() method - it is used to search a string for a match using a regular expression and return the matched results.
+// match() method - it return an array of the match values or null if no match is found 
+// by default add regular expression (/string/)
 // syntax - string.match(regex)
-let str = "I have 3 apples and 2 bananas";
-let result = str.match(/\d+/g);
-console.log(result); // ["3", "2"]
 
 // | Pattern Used        | Return Type            | Description                             |
 // | ------------------- | ---------------------- | --------------------------------------- |
 // | Regex with `g` flag | Array of matches       | All matches found                       |
 // | Regex without `g`   | Match object or `null` | First match + extra info (index, input) |
 // | No match            | `null`                 | If nothing matches                      |
+
+let matchStr = "hello javaScript , you learn world best javaScript caurse";
+console.log(matchStr.match("javascript"));   //null
+console.log(matchStr.match("javaScript"));  // return an array  by default convert regular expression
+console.log(matchStr.match(/javaScript/));   // return an array 
+console.log(matchStr.match(/javaScript/g));   // all match string
+console.log(matchStr.match(/javascript/gi));   // all match string
+
+// matchAll() method - returns an iterator of all matches, provide details information about each match, return empty iterator if no match is found
+// also add bydefault g flag at the end 
+console.log(matchStr.matchAll("javaScript"));  //returns an iterator
+let result = matchStr.matchAll("javaScript");
+
+// use of loop
+for(let item of result){
+    console.log(item);
+}
+
+// use of spread operator
+console.log(...matchStr.matchAll("javaScript"));  // return array of all matches bydefault g flag add
+
+let strChek = "hello, surya vardhan  ";
+// inclues() method - Checks if substring exists - return boolean value
+// not support regular expression
+console.log(strChek.includes("urya"));
+
+// startsWith() method - Checks if string starts with substring - return boolean value
+// not support regular expression
+console.log(strChek.startsWith("hel"));
+
+// endswith() method - Checks if string ends with substring
+// not support regular expression
+console.log(strChek.endsWith("  "));   //end with some spaces
