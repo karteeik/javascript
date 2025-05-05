@@ -157,5 +157,13 @@ console.log(numString.search(/\d+/g));  //10  / \d+ (one and more digits) /
 // in short search string without case censitive
 
 // match() method - it is used to search a string for a match using a regular expression and return the matched results.
-
 // syntax - string.match(regex)
+let str = "I have 3 apples and 2 bananas";
+let result = str.match(/\d+/g);
+console.log(result); // ["3", "2"]
+
+// | Pattern Used        | Return Type            | Description                             |
+// | ------------------- | ---------------------- | --------------------------------------- |
+// | Regex with `g` flag | Array of matches       | All matches found                       |
+// | Regex without `g`   | Match object or `null` | First match + extra info (index, input) |
+// | No match            | `null`                 | If nothing matches                      |
