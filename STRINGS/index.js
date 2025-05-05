@@ -141,15 +141,21 @@ console.log(Array.from(strr));
 // | Flag | Meaning                   | Example    |
 // | ---- | ------------------------- | ---------- |
 // | `i`  | Case-insensitive          | `/hello/i` |
-// | `g`  | Global (find all matches) | `/a/g`     |
+// | `g`  | Global (find all matches) | `/a/g`     |     most imp
 // | `m`  | Multiline mode            | `/^a/m`    |
 
 
 let searchString = "seven star hotel";
-console.log(searchString.search("Star"));   // -1 bcos, it is case sencetive but, we use
+console.log(searchString.search("Star"));   // -1
 
-console.log(searchString.search(/Star/i));  // 6 bcos, use of regexp
+console.log(searchString.search(/Star/i));  // 6 bcos, use of (i) modifier
 console.log(searchString.search(`^seven`)); // 0 
 
 let numString = "there are 123 people of our 2 country";
 console.log(numString.search(/\d+/g));  //10  / \d+ (one and more digits) /
+
+// in short search string without case censitive
+
+// match() method - it is used to search a string for a match using a regular expression and return the matched results.
+
+// syntax - string.match(regex)
