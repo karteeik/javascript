@@ -216,4 +216,4 @@ console.log(max); // 40
 
 // .reduce() does not mutate the original array.
 
-// Always provide an initialValue unless you're sure the array has at least one item.git 
+// Always provide an initialValue unless you're sure the array has at least one item.

@@ -21,8 +21,8 @@ for(let char of str){
 }
 
 // // escape charactor 
-// // (/')- for single quote
-// // (/")- for double quote
+// // (\')- for single quote
+// // (\")- for double quote
 // // (\\)- for back slace
 
 const str01="hello, my name is \'ram\'";
@@ -154,7 +154,7 @@ console.log(Array.from(strr));
 
 let searchString = "seven star hotel";
 console.log(searchString.search("Star"));   // -1
-
+console.log(searchString.search(/Star/));
 console.log(searchString.search(/Star/i));  // 6 bcos, use of (i) modifier
 console.log(searchString.search(`^seven`)); // 0 
 
