@@ -36,6 +36,21 @@ console.log(Math.floor(4.6));
 console.log(Math.ceil(4.3));
 
 // [iii] powers & roots
-// pow(x,y)
-// sqrt(x)
-// cbrt()
+// pow(x,y) - (number,how many time multiply)
+console.log(Math.pow(4,2));
+
+// sqrt(x) - square root
+console.log(Math.sqrt(4));
+
+// cbrt(x) - cube root
+console.log(Math.cbrt(27));
+
+// [iv] min/max
+// min(...arg)
+console.log(Math.min(3,2,4,5,7));
+
+// max(...arg)
+console.log(Math.max(2,4,6,3,7,1));
+
+// [v] random numbers - it returns float value between 0 and 1
+console.log(Math.random());
