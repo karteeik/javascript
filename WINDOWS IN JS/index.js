@@ -58,5 +58,5 @@
     lastChild / lastElementChild
     nextsibling / nextelementsibling
     previoussibling / previouselement
-    
+    forEach (Array.from)
 */
