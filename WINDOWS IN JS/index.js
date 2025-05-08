@@ -51,10 +51,12 @@
     removeEventListener(event, function)
     setAttribute(name, value)
     getAttribute (name )
+    closest (selector)
     parentNode / parentElement
     childNodes / children
     firstChild / firstElementChild
     lastChild / lastElementChild
     nextsibling / nextelementsibling
     previoussibling / previouselement
+    
 */
