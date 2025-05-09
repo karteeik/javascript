@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM BOM in js </title>
-</head>
-<body>
-    <h1>window object in js</h1>
-    <button onclick="window.open('https://www.w3schools.com','_blank')"> Navigate </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM BOM in js</title>
+  </head>
+  <body>
+    <h1>Window Object In JavaScript</h1>
+    <button onclick="window.open('https://www.w3schools.com','_blank')">
+      Navigate
+    </button>
 
+    <h1>History Object In JavaScript</h1>
+    <button onclick="history.back()">go back</button>
+    <button onclick="history.forward()">go forward</button>
+    <button onclick="history.go(-1)">move backward or forward</button>
 
-    <h1>history object in js</h1>
-    <button>go back</button>
-    <button>go forward</button>
-    <button>move backward or forward</button>
+    <h1>Location Object In JavaScript</h1>
+    <button onclick="location.reload()">reload</button>
 
-    
+    <!-- when we use replace than go for your URL but cannot go to the backward in the window -->
+    <button onclick="location.replace('https://www.w3schools.com')">
+      replace
+    </button>
+
+    <!-- when we use replace than go for your URL or can go to the backward in the window -->
+    <button onclick="location.assign('https://www.w3schools.com')">
+      assign
+    </button>
+
+    <h1>Screen Object In JavaScript</h1>
+    <p>We Will See The Console</p>
+
+    <!-- screen.availHeight
+672
+screen.availWidth
+796
+screen.height
+672
+screen.width
+796 -->
+
     <!-- <script>
         alert("hello welcome to javascript caurse");
     </script> -->
-</body>
+  </body>
 </html>
