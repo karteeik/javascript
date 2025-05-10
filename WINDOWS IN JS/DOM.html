@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM In JavaScript</title>
+  </head>
+  <body>
+    <!-- 
+        when the web browser load an HTML document source code and creates a tree like structure is known as Document object model (DOM). this DOM tree represents the structure of the HTML document, with each html element is being a Node in the tree.
+
+        DOM and DOM API (Application Programming Interface) is same - it's True
+
+        The Document Object Model is An API. The DOM tree is represented structure of your HTML document, as represented by the DOM API. 
+
+        As started, this API then gives us many methods and properties that we can use manipulate DOM tree and therefore by extension, the document.
+    -->
+    <!-- the DOM provides multiple properties and methods to dynamically change the content of html document using javascript -->
+
+    <!-- properties
+
+        HTML DOM properties are VALUES that you can set or change.
+
+        document
+        getElementById(id)
+        getElementsByClassName(className)
+        getElementsByTagName(tagName )
+        querySelector (selector)
+        querySelectorAll (selector )
+        innerHTML
+        textContent
+        style
+    -->
+
+    <!-- methods
+
+        HTML DOM methods are ACTIONS you can perform on HTML elements.
+
+        createElement (tagName)
+        appendChild (node)
+        removeChild (node)
+        addEventListener(event, function)
+        removeEventListener(event, function)
+        setAttribute(name, value)
+        getAttribute (name )
+        closest (selector)
+        parentNode / parentElement
+        childNodes / children
+        firstChild / firstElementChild
+        lastChild / lastElementChild
+        nextsibling / nextelementsibling
+        previoussibling / previouselement
+        forEach (Array.from) 
+    -->
+
+    
+
+    <h1>DOM Navigation</h1>
+    <p>Hello world!</p>
+
+    <script>
+        /*
+             Types of Node in JS
+        -----------------------------------------------------------------------
+
+        Element Node - An all the HTML tags
+        Text Node - In the DOM tree, Text Content, New Line, Spaces ,New Tabs
+        Attribute Node - An attribute of An element
+        Comment Node - html comments
+        proccesing instruction Node - like <? xml-stylesheets... ?>
+        Document Node - A document Node
+        Document Type Node - like <! DOCTYPE html>
+
+        <html> is the root node
+        <html> has no parents
+        <html> is the parent of <head> and <body>
+        <head> is the first child of <html>
+        <body> is the last child of <html>
+
+        <head> has one child: <title>
+        <title> has one child (a text node): "DOM Tutorial"
+        <body> has two children: <h1> and <p>
+        <h1> has one child: "DOM Lesson one"
+        <p> has one child: "Hello world!"
+        <h1> and <p> are siblings
+
+        */
+      console.log(document);
+    </script>
+  </body>
+</html>
