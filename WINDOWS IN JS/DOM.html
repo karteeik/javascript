@@ -6,38 +6,6 @@
     <title>DOM In JavaScript</title>
   </head>
   <body>
-    <!-- 
-        when the web browser load an HTML document source code and creates a tree like structure is known as Document object model (DOM). this DOM tree represents the structure of the HTML document, with each html element is being a Node in the tree.
-
-        DOM and DOM API (Application Programming Interface) is same - it's True
-
-        The Document Object Model is An API. The DOM tree is represented structure of your HTML document, as represented by the DOM API. 
-
-        As started, this API then gives us many methods and properties that we can use manipulate DOM tree and therefore by extension, the document.
-    -->
-    <!-- the DOM provides multiple properties and methods to dynamically change the content of html document using javascript -->
-
-    <!-- properties
-
-        HTML DOM properties are VALUES that you can set or change.
-
-        document
-        getElementById(id)
-        getElementsByClassName(className)
-        getElementsByTagName(tagName )
-        querySelector (selector)
-        querySelectorAll (selector )
-        innerHTML
-        textContent
-        style
-    -->
-
-    <!-- methods
-
-       
-    -->
-
-    
 
     <h1>DOM Navigation</h1>
     <p>Hello world!</p>
@@ -71,6 +39,7 @@
 
         */
 
+        // METHODS
         //  HTML DOM methods are ACTIONS you can perform on HTML elements.
         
         // parentNode / parentElement
@@ -122,11 +91,13 @@
         let lastElementChild = bodyElement.lastElementChild;
         // console.log(lastElementChild);
         
-        let nextsibling = firstElementChild.nextSibling;
-        // console.log(nextsibling);
+        let nextSibling = firstElementChild.nextSibling;
+        // console.log(nextSibling);
 
-        let nextelementsibling = firstElementChild.nextelementsibling;
-        console.log(this.nextelementsibling);
+        let nextElementSibling = firstElementChild.nextElementSibling;
+        // console.log(nextElementSibling);
+
+        
         
 
     </script>
