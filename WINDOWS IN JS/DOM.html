@@ -34,29 +34,14 @@
 
     <!-- methods
 
-        HTML DOM methods are ACTIONS you can perform on HTML elements.
-
-        createElement (tagName)
-        appendChild (node)
-        removeChild (node)
-        addEventListener(event, function)
-        removeEventListener(event, function)
-        setAttribute(name, value)
-        getAttribute (name )
-        closest (selector)
-        parentNode / parentElement
-        childNodes / children
-        firstChild / firstElementChild
-        lastChild / lastElementChild
-        nextsibling / nextelementsibling
-        previoussibling / previouselement
-        forEach (Array.from) 
+       
     -->
 
     
 
     <h1>DOM Navigation</h1>
     <p>Hello world!</p>
+    <p>Hello India!</p>
 
     <script>
         /*
@@ -86,6 +71,24 @@
 
         */
 
+        //  HTML DOM methods are ACTIONS you can perform on HTML elements.
+        
+        // parentNode / parentElement
+        // childNodes / children
+        // firstChild / firstElementChild
+        // lastChild / lastElementChild
+        // nextsibling / nextelementsibling
+        // previoussibling / previouselement
+        // forEach (Array.from) 
+        // createElement (tagName)
+        // appendChild (node)
+        // removeChild (node)
+        // addEventListener(event, function)
+        // removeEventListener(event, function)
+        // setAttribute(name, value)
+        // getAttribute (name )
+        // closest (selector)
+
         let parent = document;
         // console.log(parent);
         
@@ -102,13 +105,31 @@
         // console.log(bodychildren);
         
         let parentNode = bodyElement.parentNode;
-        // console.log(parentNode);
+        // console.log(parentNode);    //all html document
+
+        let parentElement = bodyElement.parentElement;
+        // console.log(parentElement);      //all html document
         
         let firstChild = bodyElement.firstChild;
-        console.log(firstChild);
+        // console.log(firstChild);    //text
         
-         let lastChild = bodyElement.lastChild;
-        console.log(lastChild);
+        let firstElementChild = bodyElement.firstElementChild;
+        // console.log(firstElementChild);     //first tag/element
+
+        let lastChild = bodyElement.lastChild;
+        // console.log(lastChild);
+
+        let lastElementChild = bodyElement.lastElementChild;
+        // console.log(lastElementChild);
+        
+        let nextsibling = firstElementChild.nextSibling;
+        // console.log(nextsibling);
+
+        let nextelementsibling = firstElementChild.nextelementsibling;
+        console.log(this.nextelementsibling);
+        
+
     </script>
+
   </body>
 </html>
