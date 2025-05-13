@@ -60,7 +60,7 @@
         // addEventListener(event, function)
         // removeEventListener(event, function)
         // setAttribute(name, value)
-        // getAttribute (name )
+        // getAttribute (name)
         // closest (selector)
 
         let parent = document;
@@ -74,17 +74,17 @@
 
         // DOM filtering knows
             
+        let parentNode = bodyElement.parentNode;
+        // console.log(parentNode);    //all html document
+        
+        let parentElement = bodyElement.parentElement;
+        // console.log(parentElement);      //all html document
+
         let bodychildNodes = bodyElement.childNodes;
         // console.log(bodychildNodes);
         
         let bodychildren = bodyElement.children;
         // console.log(bodychildren);
-        
-        let parentNode = bodyElement.parentNode;
-        // console.log(parentNode);    //all html document
-
-        let parentElement = bodyElement.parentElement;
-        // console.log(parentElement);      //all html document
         
         let firstChild = bodyElement.firstChild;
         // console.log(firstChild);    //text
@@ -109,6 +109,26 @@
         
         let previousElementSibling = nextElementSibling.previousElementSibling;
         // console.log(previousElementSibling);
+
+        // forEach Array.from() - it used to iterable objects into a real array
+        let iteams = document.querySelectorAll("li");
+        // console.log(iteams);
+        
+        // Array.from(iteams).forEach( Elem => console.log(Elem.textContent));
+
+        let createElement = document.createElement("h1");
+        // console.log(createElement);
+        // createElement.textContent = "hello, javaScript";
+        // console.log(createElement);
+        
+
+        let p = document.createElement("h1");
+        p.textContent = "Hello JavaScript";
+        bodyElement.appendChild(p);
+        console.log(p); 
+
+        
+        
 
     </script>
 
