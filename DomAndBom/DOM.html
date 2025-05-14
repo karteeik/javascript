@@ -6,7 +6,6 @@
     <title>DOM In JavaScript</title>
   </head>
   <body>
-
     <h1 id="top">DOM Navigation</h1>
     <p>Hello world!</p>
     <p>Hello India!</p>
@@ -19,7 +18,7 @@
     <button class="btn">Click Me</button>
 
     <script>
-        /*
+      /*
              Types of Node in JS
         -----------------------------------------------------------------------
 
@@ -46,102 +45,147 @@
 
         */
 
-        // METHODS
-        //  HTML DOM methods are ACTIONS you can perform on HTML elements.
-        
-        // parentNode / parentElement
-        // childNodes / children
-        // firstChild / firstElementChild
-        // lastChild / lastElementChild
-        // nextsibling / nextelementsibling
-        // previoussibling / previouselement
-        // forEach (Array.from) 
-        // createElement (tagName)
-        // appendChild (node)
-        // removeChild (node)
-        // addEventListener(event, function)
-        // removeEventListener(event, function)
-        // setAttribute(name, value)
-        // getAttribute (name)
-        // closest (selector)
+      // METHODS
+      //  HTML DOM methods are ACTIONS you can perform on HTML elements.
 
-        let parent = document;
-        // console.log(parent);
-        
-        let bodyElement = document.body;
-        // console.log(bodyElement);
-        
-        let headElement = document.head;
-        // console.log(headElement);
+      // parentNode / parentElement
+      // childNodes / children
+      // firstChild / firstElementChild
+      // lastChild / lastElementChild
+      // nextsibling / nextelementsibling
+      // previoussibling / previouselement
+      // forEach (Array.from)
+      // createElement (tagName)
+      // appendChild (node)
+      // removeChild (node)
+      // addEventListener(event, function)
+      // removeEventListener(event, function)
+      // setAttribute(name, value)
+      // getAttribute (name)
+      // closest (selector)
 
-        // DOM filtering knows
-            
-        let parentNode = bodyElement.parentNode;
-        // console.log(parentNode);    //all html document
-        
-        let parentElement = bodyElement.parentElement;
-        // console.log(parentElement);      //all html document
+      let parent = document;
+      // console.log(parent);
 
-        let bodychildNodes = bodyElement.childNodes;
-        // console.log(bodychildNodes);
-        
-        let bodychildren = bodyElement.children;
-        // console.log(bodychildren);
-        
-        let firstChild = bodyElement.firstChild;
-        // console.log(firstChild);    //text
-        
-        let firstElementChild = bodyElement.firstElementChild;
-        // console.log(firstElementChild);     //first tag/element
+      let bodyElement = document.body;
+      // console.log(bodyElement);
 
-        let lastChild = bodyElement.lastChild;
-        // console.log(lastChild);
+      let headElement = document.head;
+      // console.log(headElement);
 
-        let lastElementChild = bodyElement.lastElementChild;
-        // console.log(lastElementChild);
-        
-        let nextSibling = firstElementChild.nextSibling;
-        // console.log(nextSibling);
+      // DOM filtering knows
 
-        let nextElementSibling = firstElementChild.nextElementSibling;
-        // console.log(nextElementSibling);
+      let parentNode = bodyElement.parentNode;
+      // console.log(parentNode);    //all html document
 
-        let previousSibling = nextElementSibling.previousSibling;
-        // console.log(previousSibling);
-        
-        let previousElementSibling = nextElementSibling.previousElementSibling;
-        // console.log(previousElementSibling);
+      let parentElement = bodyElement.parentElement;
+      // console.log(parentElement);      //all html document
 
-        // forEach Array.from() - it used to iterable objects into a real array
-        let iteams = document.querySelectorAll("li");
-        // console.log(iteams);
-        
-        // Array.from(iteams).forEach( Elem => console.log(Elem.textContent));
+      let bodychildNodes = bodyElement.childNodes;
+      // console.log(bodychildNodes);
 
-        let createElement = document.createElement("h1");
-        // console.log(createElement);
-        // createElement.textContent = "hello, javaScript";
-        // console.log(createElement);
-        
+      let bodychildren = bodyElement.children;
+      // console.log(bodychildren);
 
-        // let p = document.createElement("p");
-        // p.textContent = "Hello JavaScript";
-        // bodyElement.appendChild(p);
-        // console.log(p); 
+      let firstChild = bodyElement.firstChild;
+      // console.log(firstChild);    //text
 
+      let firstElementChild = bodyElement.firstElementChild;
+      // console.log(firstElementChild);     //first tag/element
 
-        // let ullist = document.querySelector("ul");
-        // let firstIteam = ullist.removeChild(ullist.firstElementChild);
-        // ullist.removeChild(firstChild);
-        
-        
-        // let btn = document.querySelector(".btn");
-        // btn.addEventListener('click',()=>{
-        //   alert("Button clicked !");
-        // });
+      let lastChild = bodyElement.lastChild;
+      // console.log(lastChild);
+
+      let lastElementChild = bodyElement.lastElementChild;
+      // console.log(lastElementChild);
+
+      let nextSibling = firstElementChild.nextSibling;
+      // console.log(nextSibling);
+
+      let nextElementSibling = firstElementChild.nextElementSibling;
+      // console.log(nextElementSibling);
+
+      let previousSibling = nextElementSibling.previousSibling;
+      // console.log(previousSibling);
+
+      let previousElementSibling = nextElementSibling.previousElementSibling;
+      // console.log(previousElementSibling);
+
+      // forEach Array.from() - it used to iterable objects into a real array
+      let iteams = document.querySelectorAll("li");
+      // console.log(iteams);
+
+      // Array.from(iteams).forEach( Elem => console.log(Elem.textContent));
+
+      let createElement = document.createElement("h1");
+      // console.log(createElement);
+      // createElement.textContent = "hello, javaScript";
+      // console.log(createElement);
+
+      // let p = document.createElement("p");
+      // p.textContent = "Hello JavaScript";
+      // bodyElement.appendChild(p);
+      // console.log(p);
+
+      // let ullist = document.querySelector("ul");
+      // let firstIteam = ullist.removeChild(ullist.firstElementChild);
+      // ullist.removeChild(firstChild);
+
+      // addEventListener(event, function)
+      // addEventListener() is much more powerful and flexible
+      // onclick overrides previous handlers but addEventListener() allows multiple handlers
+
+      // syntax - element.addEventListener(eventType, callbackFunction);
+
+      // let btn = document.querySelector(".btn");
+
+      // btn.onclick = () => console.log("first");
+      // btn.onclick = () => console.log("second");
+
+      // // if we use only onclick event than show override event but use of eventlistener allows multiple event shown 
+      
+      // btn.addEventListener("click", () => {
+      //   console.log("button clicked");
+      // });
+      // btn.addEventListener("click", () => {
+      //   console.log("hacked");
+      // });
+      
+      // removeEventListener(event, function)
+      // it's an essential part of managing events in JavaScript to avoid memory leaks or stop unwanted behavior.
+
+      // syntax - element.removeEventListener(eventType, handlerFunction);
+
+      // Rules (Very Important)
+      // You must use the same function reference (not an anonymous function).
+      // removeEventListener() will not work if the handler was added with an anonymous function.
+
+      let btn = document.querySelector('.btn');
+
+      // btn.addEventListener("click",function() {
+      //   console.log("ClickOne");
+      // });
+
+      // btn.removeEventListener("click", function(){
+      //   console.log("ClickOne");
+      // });
+
+      // This is not work bcos,the handler was added with an anonymous function.
+
+      // btn.addEventListener("click",sayhi);
+
+      // function sayhi() {
+      //   alert('welcome, javascript');
+      //   btn.removeEventListener("click",sayhi);
+      // }
+      // only one time run event
+
+      // only one time run event shortcut
+      // btn.addEventListener("click", () => {
+      //   alert("Runs only once!");
+      // }, { once: true });
 
 
     </script>
-
   </body>
 </html>
