@@ -17,6 +17,8 @@
 
     <button class="btn">Click Me</button>
 
+    <img id="myImg">
+
     <script>
       /*
              Types of Node in JS
@@ -185,7 +187,22 @@
       //   alert("Runs only once!");
       // }, { once: true });
 
+      // setAttribute() method sets or adds an attribute to an element.
+      let findImg = document.getElementById("myImg");
+      findImg.setAttribute("src","myImg.jpg");
+      findImg.setAttribute("alt","round-Img");
+      findImg.setAttribute("height","200px");
+      findImg.setAttribute("width","200px");
 
+      console.log(findImg);
+
+      // getAttribute() method gets the value of a specified attribute.
+
+      let getSrc = findImg.getAttribute("src");
+      console.log(getSrc);
+
+      
+      
     </script>
   </body>
 </html>
