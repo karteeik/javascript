@@ -15,7 +15,11 @@
       <li>Three</li>
     </ul>
 
-    <button class="btn">Click Me</button>
+    <div class="card">
+      <div class="content">
+        <button class="btn">Click Me</button>
+      </div>
+    </div>
 
     <img id="myImg">
 
@@ -162,7 +166,7 @@
       // You must use the same function reference (not an anonymous function).
       // removeEventListener() will not work if the handler was added with an anonymous function.
 
-      let btn = document.querySelector('.btn');
+      // let btn = document.querySelector('.btn');
 
       // btn.addEventListener("click",function() {
       //   console.log("ClickOne");
@@ -203,6 +207,12 @@
 
       // .closest(selector) method searches up the DOM tree from the current element until it finds the first ancestor (including itself) that matches the selector.
 
+      // ancestor means parent like Child → The element itself Parent → The element one level above Grandparent → Two levels above Great-grandparent, etc.
+
+      let btn = document.querySelector('.btn');
+      let card = btn.closest(".card");
+
+      console.log(card);
       
       
     </script>
