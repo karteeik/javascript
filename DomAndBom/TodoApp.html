@@ -9,26 +9,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <style>
+        *{
+            margin : 0;
+            padding : 0;
+            box-sizing : border-box;
+            font-family : 'monospace';
+        }
+        
+        html, body{
+            width : 100%;
+            height : 100%;
+            background-color: #09072e;
+            color: rgb(214, 180, 139);
+            text-transform: capitalize;
+        }
         body{
-        font-family: "Josefin Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+        div{
+            margin: 20px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input[type="text"]{
+            width: 330px;
+            height: 30px;
+            font-size: 25px;
+            text-transform: capitalize;
         }
     </style>
 </head>
 <body>
     <div>
-        <h1>DOM API 2</h1>
+        <h1>TODO APP</h1>
         <input type="text">
         <button class="btn">Click Me</button>
         <div class="value"></div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi similique iure, quas odio aliquid nulla nemo totam porro consequatur tempora voluptas animi facere, nam accusamus vel perspiciatis voluptate fugit voluptatem?</p>
+        <h3>here, the all task to do</h3>
     </div>
 
     <script>
         let ELem = document.querySelector(".btn");
         console.log(ELem);
-        
     </script>
 </body>
 </html>

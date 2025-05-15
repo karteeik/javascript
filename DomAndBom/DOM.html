@@ -15,8 +15,8 @@
       <li>Three</li>
     </ul>
 
-    <div class="card">
-      <div class="content">
+    <div id="card" class="card">
+      <div class="card">
         <button class="btn">Click Me</button>
       </div>
     </div>
@@ -211,9 +211,10 @@
 
       let btn = document.querySelector('.btn');
       let card = btn.closest(".card");
-
       console.log(card);
-      
+
+      let card1 = btn.closest("body");
+      console.log(card1);
       
     </script>
   </body>
