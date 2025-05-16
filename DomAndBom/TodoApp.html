@@ -43,10 +43,9 @@
             padding: 0 10px;
             border: none;
             border-radius: 15px;
-
-            &:hover{
+        }
+        input[type="text"]:hover{
                  box-shadow: 0 4px 10px rgb(163, 164, 171);
-            }
         }
         .btn{
             font-size: large;
@@ -55,12 +54,17 @@
             margin-top: 8px;
             margin-bottom: -8px;
             border-radius: 10px;
-            
-            &:hover{
+        }
+        .btn:hover{
                 background-color: blue;
                 color: rgb(214, 180, 139);
                 box-shadow: 0 4px 10px rgb(163, 164, 171);
-            }
+        }
+        h3{
+            margin: 20px;
+        }
+        p{
+            font-size: 25px;
         }
     </style>
 </head>
@@ -69,13 +73,23 @@
         <h1>TODO APP</h1>
         <input type="text" id="task-input" placeholder="enter a task.....">
         <button class="btn">add task</button>
-        <div class="task-list"></div>
         <h3>here, the all task to do</h3>
+        <div id="task-list"></div>
     </div>
 
     <script>
-        let ELem = document.querySelector(".task-input").textContent;
-        console.log(ELem);
+
+      const inputText = document.getElementById("task-input");
+      const clickbtn = document.querySelector(".btn");
+      const taskList = document.getElementById("task-list");
+
+      clickbtn.addEventListener('click',()=>{
+        const creatElem = document.createElement("p");
+        creatElem.textContent = inputText.value;
+        taskList.appendChild(creatElem);
+        inputText.value = "";
+      });
+
     </script>
 </body>
 </html>

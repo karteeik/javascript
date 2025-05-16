@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <!--An event is a signal that something has happened.
+        Events can be triggered by -
+
+        The user (e.g., clicking, typing, scrolling)
+        The browser (e.g., loading a page, resizing the window)
+        JavaScript itself (e.g., timers, custom events)  
+        
+        how to add event listeners
+        [1] addEventListener
+        [2] Inline in HTML
+        [3] Using DOM properties-->
+
+        <!-- [1] addEventListener -->
+        <button class="btn1">Insert</button>
+
+        <!-- [2] Inline in HTML -->
+        <button class="btn2">Update</button>
+
+        <!-- [3] Using DOM properties -->
+        <button class="btn3">Delete</button>
+
+        <script>
+            let btn1 = document.querySelector(".btn1");
+            btn1.addEventListener('click',()=>{
+                alert('Use of addEventListener');
+            });
+        </script>
+</body>
+</html>
