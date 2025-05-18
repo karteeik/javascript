@@ -31,6 +31,8 @@
             width: 200px;
             background-color: #e7e27f;
             border-radius: 50%;
+            padding: 10px;
+            text-align: center;
         }
         #mybtn{
             border: none;
@@ -76,10 +78,18 @@
             findBox.innerHTML="mouse is out";
         };
 
+        const mouseup=()=>{
+            findBox.style.fontsize = "30px";
+        };
+
         findBtn.addEventListener('click',clickEvent);    
         findBtn.addEventListener('dblclick',dblclickEvent);  
         findBox.addEventListener('mouseover',mouseover);  
         findBox.addEventListener('mouseout',mouseout);    
+        findBox.addEventListener('mouseup',mouseup);    
+        findBox.addEventListener('mousedown',mousedown);    
+        findBox.addEventListener('mouseenter',mouseenter);    
+        findBox.addEventListener('mouseleave',mouseleave);    
     </script>
 </body>
 </html>
