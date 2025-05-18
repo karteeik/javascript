@@ -14,34 +14,36 @@
         JavaScript itself (e.g., timers, custom events)  
         
         how to add event listeners
-        [1] addEventListener
-        [2] Inline in HTML
+        [1] Inline in HTML
+        [2] addEventListener
         [3] Using DOM properties-->
 
-        <!-- [1] addEventListener -->
-        <button class="btn1">Insert</button>
+        <!-- [1] Inline in HTML -->
+        <button id="btn2" onclick="alert('Inline Event in HTML')">Update</button>
 
-        <!-- [2] Inline in HTML -->
-        <button class="btn2">Update</button>
+        <!-- [2] addEventListener -->
+        <button id="btn1">Insert</button>
 
         <!-- [3] Using DOM properties -->
-        <button class="btn3">Delete</button>
+        <button id="btn3">Delete</button>
 
         <script>
-            let btn1 = document.querySelector(".btn1");
+
+            //addEventListener
+            let btn1 = document.getElementById("btn1");
             btn1.addEventListener('click',()=>{
                 alert('Use of addEventListener');
             });  
 
-            element.addEventListener('click', function(event) {
-  console.log(event.type); // "click"
-  console.log(event.target); // the clicked element
-});
- document.getElementById('myList').addEventListener('click', function(e) {
-    if (e.target.tagName === 'LI') {
-      alert(`You clicked on ${e.target.textContent}`);
-    }
-  });
+            //Using DOM properties
+
+            // document.getElementById('btn3').onclick = function (){
+            //     alert('Using DOM Properties');
+            // };
+            document.getElementById('btn3').onclick = () => {
+                alert('Using DOM Properties');
+            };
+            
         </script>
 </body>
 </html>
