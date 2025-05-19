@@ -79,17 +79,36 @@
         };
 
         const mouseup=()=>{
+            findBox.style.backgroundColor="blue";
             findBox.innerHTML="mouse is up";
         };
 
+        const mousedown=()=>{
+            findBox.style.backgroundColor="white";
+            findBox.innerHTML="mouse is down";
+        };
+
+        const mouseenter=()=>{
+            findBox.innerHTML="Enter";
+        };
+
+        const mouseleave=()=>{
+            findBox.innerHTML="Exit";
+        };
+
+        const contexmenu=()=>{
+            alert("right click ontextmenu")
+        };
+
         findBtn.addEventListener('click',clickEvent);    
-        findBtn.addEventListener('dblclick',dblclickEvent);  
+        findBtn.addEventListener('dblclick',dblclickEvent); 
         findBox.addEventListener('mouseover',mouseover);  
         findBox.addEventListener('mouseout',mouseout);    
         findBox.addEventListener('mouseup',mouseup);    
-        // findBox.addEventListener('mousedown',mousedown);    
-        // findBox.addEventListener('mouseenter',mouseenter);    
-        // findBox.addEventListener('mouseleave',mouseleave);    
+        findBox.addEventListener('mousedown',mousedown);    
+        findBox.addEventListener('mouseenter',mouseenter);    
+        findBox.addEventListener('mouseleave',mouseleave);  
+        findBox.addEventListener('contextmenu',contexmenu);  
     </script>
 </body>
 </html>
