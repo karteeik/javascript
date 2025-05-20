@@ -16,7 +16,14 @@
         <p class="eventType">Event Type : </p>
     </div>
     <script>
-        
+        const anyInput = document.getElementById('myInput');
+
+        const keydown = (e) =>{
+            console.log(e);
+            
+        };
+
+        anyInput.addEventListener('keydown',keydown);
     </script>
 </body>
 </html>
