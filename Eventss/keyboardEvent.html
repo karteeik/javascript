@@ -18,9 +18,10 @@
     <script>
         const anyInput = document.getElementById('myInput');
 
-        const keydown = (e) =>{
-            console.log(e);
-            
+        const keydown = (event) =>{
+            console.log(event.key);
+            console.log(event.code);
+            console.log(event.type);
         };
 
         anyInput.addEventListener('keydown',keydown);
