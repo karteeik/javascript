@@ -8,7 +8,7 @@
 <body>
     <h1>All KeyBoard Events</h1>
 
-    <input type="text" id="myInput" placeholder="Enter Any Input">
+    <input type="text" id="myInput" placeholder="Enter Any Input" autocomplete="off">
     <div class="output">
         <p class="keyPressed">Key Pressed : </p>
         <p class="keyCode">Key Code : </p>
@@ -18,13 +18,21 @@
     <script>
         const anyInput = document.getElementById('myInput');
 
-        const keydown = (event) =>{
-            console.log(event.key);
-            console.log(event.code);
-            console.log(event.type);
+        // What is the event object?
+        // When an event occurs, the browser creates an event object, which contains information about the event. This object is automatically passed to the event handler function.
+        const KeyBoard = (event) =>{
+           
+            // console.log(event);
+            
+            document.querySelector('.keyPressed').textContent = `Key Pressed : ${event.key}`;
+            document.querySelector('.keyCode').textContent = `Key Code : ${event.code}`;
+            document.querySelector('.charCode').textContent = `Char Code : ${event.key.charCodeAt(0)}`;
+            document.querySelector('.eventType').textContent = `Event Type : ${event.type}`;
         };
 
-        anyInput.addEventListener('keydown',keydown);
+        // anyInput.addEventListener('keyup',KeyBoard);
+        // anyInput.addEventListener('keydown',KeyBoard);
+        anyInput.addEventListener('keypress',KeyBoard);
     </script>
 </body>
 </html>
