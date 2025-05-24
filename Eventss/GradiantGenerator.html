@@ -16,11 +16,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background: linear-gradient(to right, rgb(5 25 55), rgb(0 135 147));
         }
         .main-box{
             width: 30%;
             height: 35%;
-            border: 2px solid  rgb(109, 102, 102);
+            /* border: 2px solid  rgb(109, 102, 102);     */
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -32,13 +33,46 @@
             box-shadow: 1px 1px 10px 1px rgb(109, 102, 102);
             transition: 0.2s ease-in-out;
         }
+        .btns{
+            display: flex;
+            gap: 30px;
+        }
+        .btns button{
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: none;
+            font-size: 1.2rem;
+            color: rgb(1, 7, 12);
+        }
+        #btn1{
+            background-color: rgb(138, 49, 49);
+        }
+        #btn2{
+            background-color: rgb(221, 205, 33);
+        }
+        .copyCode{
+            border: 2px solid rgb(109, 102, 102);
+            margin: 0 20px;
+            border-radius: 20px;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="main-box">
-        <button id="btn1">12321</button>
-        <button id="btn2">31233</button>
-        <p id="copybtn">Copy Text Here</p>
+        <div class="btns">
+            <button id="btn1">#051937</button>
+            <button id="btn2">#008793</button>
+        </div>
+        <p id="copybtn">Copy Your Code Here</p>
+        <div class="copyCode">
+            background: linear-gradient(to right, rgb(5 25 55), rgb(0 135 147));
+        </div>
     </div>
+
+    <script>
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+    </script>
 </body>
 </html>
