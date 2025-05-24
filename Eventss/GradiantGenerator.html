@@ -43,6 +43,7 @@
             border: none;
             font-size: 1.2rem;
             color: rgb(1, 7, 12);
+            cursor: pointer;
         }
         #btn1{
             background-color: rgb(138, 49, 49);
@@ -90,8 +91,13 @@
             btn1.innerHTML = `${colorbtn1}`;
         };
 
+        const color2 = () => {
+            let colorbtn2 = handleHex();
+            btn2.innerHTML = `${colorbtn2}`;
+        };
+
         btn1.addEventListener('click', color1);
-        // btn2.addEventListener('click', color2);
+        btn2.addEventListener('click', color2);
     </script>
 </body>
 </html>
