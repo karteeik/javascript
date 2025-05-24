@@ -73,6 +73,18 @@
     <script>
         let btn1 = document.getElementById('btn1');
         let btn2 = document.getElementById('btn2');
+
+        const handleHex = () => {
+            let myHex = "0123456789ABCDEF";
+            let hexaColor = "#";
+                for (i=0; i<6; i++){
+                    hexaColor += myHex[Math.floor(Math.random()*16)];
+                }
+            console.log(hexaColor);
+        };
+
+        btn1.addEventListener('click', handleHex);
+        btn2.addEventListener('click', handleHex);
     </script>
 </body>
 </html>
