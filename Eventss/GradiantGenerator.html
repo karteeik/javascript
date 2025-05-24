@@ -81,10 +81,17 @@
                     hexaColor += myHex[Math.floor(Math.random()*16)];
                 }
             console.log(hexaColor);
+            
+            return hexaColor;
         };
 
-        btn1.addEventListener('click', handleHex);
-        btn2.addEventListener('click', handleHex);
+        const color1 = () => {
+            let colorbtn1 = handleHex();
+            btn1.innerHTML = `${colorbtn1}`;
+        };
+
+        btn1.addEventListener('click', color1);
+        // btn2.addEventListener('click', color2);
     </script>
 </body>
 </html>
