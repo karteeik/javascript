@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right, rgb(5 25 55), rgb(0 135 147));
+        }
+        .main-box{
+            width: 30%;
+            height: 35%;
+            border: 2px solid  rgb(109, 102, 102);    
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .btns{
+            display: flex;
+            gap: 30px;
+        }
+        .btns button{
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: none;
+            font-size: 1.2rem;
+            color: rgb(1, 7, 12);
+            cursor: pointer;
+        }
+        #btn1{
+            background-color: rgb(138, 49, 49);
+        }
+        #btn2{
+            background-color: rgb(221, 205, 33);
+        }
+        .copyCode{
+            border: 2px solid rgb(109, 102, 102);
+            margin: 0 20px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        @media (width<=768px) {
+            .main-box{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <div class="btns">
+            <button id="btn1">#051937</button>
+            <button id="btn2">#008793</button>
+        </div>
+        <p id="copybtn">Copy Your Code Here</p>
+        <div class="copyCode">
+             background-image: linear-gradient(to right, #051937, #008793);
+        </div>
+    </div>
+
+    <script>
+ 
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let copyColor = document.querySelector('.copyCode');
+        let colorbtn1 = "#051937";
+        let colorbtn2 = "#008793";
+
+        const handleHex = () => {
+            let myHex = "0123456789ABCDEF";
+            let hexaColor = "#";
+                for (i=0; i<6; i++){
+                    hexaColor += myHex[Math.floor(Math.random()*16)];
+                }         
+            return hexaColor;
+        };
+
+        const updateBG = () => {
+            document.body.style.backgroundImage = `linear-gradient(to right, ${colorbtn1}, ${colorbtn2})`;
+            copyColor.innerHTML = `background-image: linear-gradient(to right, ${colorbtn1}, ${colorbtn2});`;
+        };
+
+        const color1 = () => {
+            colorbtn1 = handleHex();
+            btn1.innerHTML = `${colorbtn1}`;
+            updateBG();
+        };
+
+        const color2 = () => {
+            colorbtn2 = handleHex();
+            btn2.innerHTML = `${colorbtn2}`;
+            updateBG();
+        };
+
+        btn1.addEventListener('click', color1);
+        btn2.addEventListener('click', color2);
+
+        copyColor.addEventListener('click', () => {
+            navigator.clipboard.writeText(copyColor.innerHTML);
+            alert('Copied The Text : ' + copyColor.innerHTML);
+        });
+
+    </script>
+</body>
+</html>
