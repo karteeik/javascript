@@ -3,3 +3,6 @@ localStorage.setItem("name","kartik");
 localStorage.getItem("name"); 
 localStorage.removeItem("name"); 
 localStorage.clear();
+
+// JSON Stringify used  to convert json data to string 
+
