@@ -26,3 +26,16 @@ const jsonString = JSON.stringify(obj, (key, value) => {
 });
 console.log(jsonString);
 // Output: '{"name":"Alice","age":25}'
+
+// Set item
+sessionStorage.setItem("key", "value");
+
+// Get item
+let value = sessionStorage.getItem("key");
+
+// Remove item
+sessionStorage.removeItem("key");
+
+// Clear all items
+sessionStorage.clear();
+
