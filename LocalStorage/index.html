@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+
+    <!-- <input id="input-name" type="text" placeholder="Enter Username" autocomplete="off">
+    <button id="btn">Click Me</button>
+    <h1>Har Har Mahadev, I am <span id="username">XYZ</span></h1> -->
+
+    <script>
+        // const btn = document.getElementById('btn');
+        // const inputName = document.getElementById('input-name');
+        // const uname =  document.getElementById('username');
+
+        // btn.addEventListener('click',() => {
+        //     const getInput = inputName.value;
+        //     localStorage.setItem("username",getInput);
+        //     uname.innerText = getInput;
+            
+        // });
+
+        // The localStorage object allows you to store permanent key/value pairs in the browser 
+        // localStorage.setItem("Name","Kartik"); 
+        // localStorage.setItem("Age","20"); 
+        // localStorage.getItem("Name"); 
+        // localStorage.removeItem("Name"); 
+        // localStorage.clear();
+
+        // JSON Stringify used  to convert json data to string 
+        // JSON.stringify(value, replacer, space)
+
+        // const obj = { name: "Alice", age: 25 };
+        // const jsonString = JSON.stringify(obj);
+        // console.log(jsonString);
+        // Output: '{"name":"Alice","age":25}'
+
+
+        // const jsonString = JSON.stringify(obj, null, 2);
+        // console.log(jsonString);
+        // /* Output:
+        // {
+        //   "name": "Alice",
+        //   "age": 25
+        // }
+        // */
+
+
+        // const obj = { name: "Alice", age: 25, password: "secret" };
+        // const jsonString = JSON.stringify(obj, (key, value) => {
+        // if (key === "password") return undefined;
+        // return value;
+        // });
+        // console.log(jsonString);
+        
+
+        sessionStorage.setItem("key", "value");
+        // let value = sessionStorage.getItem("key");
+        // sessionStorage.removeItem("key");
+        // sessionStorage.clear();
+    </script>
+</body>
+</html>
