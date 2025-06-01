@@ -30,34 +30,40 @@
         // localStorage.removeItem("Name"); 
         // localStorage.clear();
 
-        // JSON Stringify used  to convert json data to string 
+        // JSON Stringify used to JSON object/JSON Array convert to JSON string 
         // JSON.stringify(value, replacer, space)
 
         const obj = { name: "Alice", age: 25 };
-        const jsonStrings = JSON.stringify(obj);
-        console.log(jsonStrings);
-        // Output: '{"name":"Alice","age":25}'
-
-
+        console.log(obj);
+        console.log(typeof obj);
+        
+        // const jsonStrings = JSON.stringify(obj);
+        // console.log(jsonStrings);
+        // console.log(typeof jsonStrings);
+        
         const jsonString = JSON.stringify(obj, null, 2);
         console.log(jsonString);
-        // /* Output:
-        // {
-        //   "name": "Alice",
-        //   "age": 25
-        // }
-        // */
-
-
-        // const obj = { name: "Alice", age: 25, password: "secret" };
-        // const jsonString = JSON.stringify(obj, (key, value) => {
-        // if (key === "password") return undefined;
-        // return value;
-        // });
-        // console.log(jsonString);
+        localStorage.setItem('JSONtext',jsonString);
         
+        // Array
+        const listName = ['ram','laxman','bharat','shatrughan'];
+        console.log(listName);
+        console.log(typeof listName);
+        
+        const JSONarray = JSON.stringify(listName);
+        console.log(JSONarray);
+        console.log(typeof JSONarray);
+        localStorage.setItem('JSONarray',JSONarray);
 
-        sessionStorage.setItem("key", "value");
+        // JSON.parse() - Converts a JSON string → JavaScript object.
+        const jsonStr = '{"name":"Alice","age":30}';
+        const obj1 = JSON.parse(jsonStr);
+        console.log(obj1); 
+        console.log(typeof obj1); 
+        console.log(obj1.name); 
+        console.log(obj1.age); 
+
+        // sessionStorage.setItem("key", "value");
         // let value = sessionStorage.getItem("key");
         // sessionStorage.removeItem("key");
         // sessionStorage.clear();
