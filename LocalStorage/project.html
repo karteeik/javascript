@@ -10,14 +10,26 @@
         <h1>TO-DO List</h1>
         <input type="search" id="inputValue">
         <button id="addbtn">Add</button>
+        <div id="task-list"></div>
     </div>
 
     <script>
         const inputValue = document.getElementById('inputValue');
         const addBtn = document.getElementById('addbtn');
+        const tasklist = document.getElementById('task-list');
 
         addBtn.addEventListener('click',()=>{
-            const inputtxt = inputValue.innerText;
+            const creatElem = document.createElement('p');
+            creatElem.innerText = inputValue.value;
+            tasklist.append(creatElem);
+            inputValue.value = "";
+
+            const elemDelete = document.createElement('button');
+            elemDelete.innerText = "Delete";
+            creatElem.append(elemDelete);
+        });
+
+        elemDelete.addEventListener('click',()=>{
             
         });
     </script>
