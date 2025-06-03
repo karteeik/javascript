@@ -6,31 +6,50 @@
     <title>TO DO App</title>
 </head>
 <body>
-    <div class="main-box">
-        <h1>TO-DO List</h1>
-        <input type="search" id="inputValue">
-        <button id="addbtn">Add</button>
+   
+    <form>
+        <div>
+            <h1>Todo App</h1>
+            <input type="text" id="inputValue" placeholder="Enter Task Todo........." autocomplete="off">
+            <button id="addbtn">Add Todo</button>
+        </div>
         <div id="task-list"></div>
-    </div>
+    </form>
 
     <script>
         const inputValue = document.getElementById('inputValue');
         const addBtn = document.getElementById('addbtn');
         const tasklist = document.getElementById('task-list');
+        let localTodoArray = [];
 
-        addBtn.addEventListener('click',()=>{
-            const creatElem = document.createElement('p');
-            creatElem.innerText = inputValue.value;
-            tasklist.append(creatElem);
+        const addTodoList = (e) => {
+            e.preventDefault();
+        
+            const todoListValue = inputValue.value.trim();
+
+            const getTodoListFromLocal = () => {
+                return JSON.parse(localStorage.getItem('TodoListTask'));
+            };
+
+            localTodoArray = getTodoListFromLocal() || [];
+
+            localTodoArray.push(todoListValue);
+            // console.log(localTodoArray);
+            localTodoArray = [...new Set(localTodoArray)];   //To Use Only Unique Value
+            localStorage.setItem('TodoListTask',JSON.stringify(localTodoArray));
+            
+
+            const divElement =  document.createElement('div');
+            divElement.classList.add('list-item');
+            divElement.innerHTML = `<li>${inputValue.value}</li> <button class="deletebtn"> Delete </button> `;
+            tasklist.append(divElement);
+     
             inputValue.value = "";
+            localStorage.setItem('Todo',divElement.value);
+        };
 
-            const elemDelete = document.createElement('button');
-            elemDelete.innerText = "Delete";
-            creatElem.append(elemDelete);
-        });
-
-        elemDelete.addEventListener('click',()=>{
-            creatElem.remove();
+        addBtn.addEventListener('click',(e)=>{
+           addTodoList(e);
         });
     </script>
 </body>
