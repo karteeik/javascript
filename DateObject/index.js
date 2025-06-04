@@ -1,5 +1,17 @@
+// The Date object in JavaScript is used to work with dates and times. It allows you to 
+//     Get the current date/time
+//     Create specific dates
+//     Format dates
+//     Compare or manipulate dates
+//     Do calculations like date differences
+//     Under the hood, the Date object represents a timestamp
+// the number of milliseconds since January 1, 1970, 00:00:00 UTC (called the Unix Epoch).
+
 const now = new Date(); // current date and time
 console.log(now); 
+
+const d1 = new Date("2025-06-04"); // ISO format (YYYY-MM-DD)
+console.log(d1.toString());
 
 const d = new Date();
 
