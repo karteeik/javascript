@@ -93,8 +93,10 @@ console.log(d.getMilliseconds());
 console.log(d.getTime());        // it's returns the number of milliseconds since January 1, 1970:
 
 
+// set methods
 d.setFullYear(2025);
 d.setMonth(0);  // Month Count 0 to 11
 d.setDate(23);
+
 
 console.log(d.toDateString());
