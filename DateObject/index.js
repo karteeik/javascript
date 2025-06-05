@@ -58,33 +58,35 @@ console.log(yearToMinutes);
 const yearToSecond = new Date(2025, 3, 5, 11, 32, 56);
 console.log(yearToSecond);
 
-// new Date(year,month,day,hours,minutes,seconds,ms)
+// new Date(year,month,day,hours,minutes,seconds,ms)    -not work
 const yearToMS = new Date(2025, 3, 5, 11, 32, 56, 3432);
 console.log(yearToMS);
 
 // new Date(milliseconds)
 // One day (24 hours) is 86 400 000 milliseconds.
-
 const dateMS = new Date(100000000000);
 console.log(dateMS);
 
-const d1 = new Date("2025-06-04"); // ISO format (YYYY-MM-DD)
-console.log(d1.toString());
 
+// Date Methods
+const d1 = new Date(); 
+console.log(d1.toString()); //by default in console
+console.log(d1.toDateString()); //only date
+console.log(d1.toUTCString()); //GMT
+console.log(d1.toISOString());   // "2025-06-04T17:30:00.000Z"
+
+
+// 
 const d = new Date();
-
 console.log(d.getFullYear());   // 2025
 console.log(d.getMonth());      // 5 (June)
 console.log(d.getDate());       // 4
 console.log(d.getDay());        // 3 (Wednesday)
 console.log(d.toDateString());  // "Wed Jun 04 2025"
-console.log(d.toISOString());   // "2025-06-04T17:30:00.000Z"
+
 
 d.setFullYear(2025);
 d.setMonth(0);  // Month Count 0 to 11
 d.setDate(23);
 
 console.log(d.toDateString());
-
-const bDate = new Date(24,4,17,11,44);
-console.log(bDate);
