@@ -67,6 +67,10 @@ console.log(yearToMS);
 const dateMS = new Date(100000000000);
 console.log(dateMS);
 
+// get date to use milliseconds
+const getMStoTime = new Date(1749147420673);
+console.log(getMStoTime);
+
 
 // Date Methods
 const d1 = new Date(); 
@@ -76,13 +80,17 @@ console.log(d1.toUTCString()); //GMT
 console.log(d1.toISOString());   // "2025-06-04T17:30:00.000Z"
 
 
-// 
+// get methods
 const d = new Date();
-console.log(d.getFullYear());   // 2025
-console.log(d.getMonth());      // 5 (June)
-console.log(d.getDate());       // 4
-console.log(d.getDay());        // 3 (Wednesday)
-console.log(d.toDateString());  // "Wed Jun 04 2025"
+console.log(d.getFullYear());  
+console.log(d.getMonth());      // 0 to 11
+console.log(d.getDate());       
+console.log(d.getDay());       // 0 to 6
+console.log(d.getHours());        
+console.log(d.getMinutes());        
+console.log(d.getSeconds());        
+console.log(d.getMilliseconds());        
+console.log(d.getTime());        // it's returns the number of milliseconds since January 1, 1970:
 
 
 d.setFullYear(2025);
