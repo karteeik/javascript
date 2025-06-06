@@ -78,6 +78,14 @@ console.log(d1.toString()); //by default in console
 console.log(d1.toDateString()); //only date
 console.log(d1.toUTCString()); //GMT
 console.log(d1.toISOString());   // "2025-06-04T17:30:00.000Z"
+console.log(d1.toLocaleString());
+console.log(d1.toLocaleDateString());
+console.log(d1.toLocaleTimeString());
+
+// to get milliseconds of UTC format / gettime() other method
+const getMS = new Date();
+const getparse = Date.parse(getMS);
+console.log(getparse);
 
 
 // get methods
@@ -92,11 +100,59 @@ console.log(d.getSeconds());
 console.log(d.getMilliseconds());        
 console.log(d.getTime());        // it's returns the number of milliseconds since January 1, 1970:
 
+// You cannot use it on a date object like myDate.now().
+// syntax - Date.now().
+console.log(Date.now());    // same as gettime 
 
-// set methods
-d.setFullYear(2025);
-d.setMonth(0);  // Month Count 0 to 11
-d.setDate(23);
+// set methods - warning - you'r not set day
+// setDate()	Set the day as a number (1-31)
+const d2 = new Date();
+d2.setDate(23);    
+
+// setFullYear()	Set the year (yyyy)
+d2.setFullYear(2025);    
+
+// setHours()	Set the hour (0-23)
+d2.setHours(3);
+
+// setMilliseconds()	Set the milliseconds (0-999)
+// d2.setMilliseconds(211);
+
+// setMinutes()	Set the minutes (0-59)
+d2.setMinutes(56);
+
+// setMonth()	Set the month (0-11)
+d2.setMonth(10);
+
+// setSeconds()	Set the seconds (0-59)
+d2.setSeconds(34);
+
+// setTime()	Set the time (milliseconds since January 1, 1970)
+// d2.setTime();
+
+console.log(d2.toString());
 
 
-console.log(d.toDateString());
+// Write function to add  a specified number of days to a given date.
+
+const addDaysToDay = (date,extra) => {
+    const updatedDate = date.setDate(date.getDate() + extra);
+    return new Date(updatedDate);
+};
+
+const date = new Date();
+const newDate = addDaysToDay(date,12);
+console.log(newDate.toLocaleDateString());
+
+
+// Write function to find different between two dates
+
+const findDifference = (date01,date02) => {
+    let oneDay = 24 * 60 * 60 * 1000;   //milliseconds in 1 day
+    let diffMs = Math.abs(date01 - date02);
+    return Math.ceil(diffMs/oneDay);;
+};
+
+const date01 = new Date('2024-03-23');
+const date02 = new Date('2024-03-28');
+console.log(findDifference(date01,date02));

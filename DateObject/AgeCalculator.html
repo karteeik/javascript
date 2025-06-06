@@ -9,8 +9,18 @@
     <div class="container">
         <h1>Age Calculator</h1>
         <input type="date" id="dob">
-        <button onclick="calculateAge()">Calculate Age</button>
+        <button id="calculatebtn">Calculate Age</button>
         <div id="result"></div>
     </div>
+
+    <script>
+        const getdob = document.getElementById('dob');
+        const btn = document.getElementById('calculatebtn');
+
+        btn.addEventListener('click',() =>{
+            const userDob = getdob.value;
+            const toDay = new Date().toLocaleDateString();
+        });
+    </script>
 </body>
 </html>
