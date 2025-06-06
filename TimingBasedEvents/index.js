@@ -8,6 +8,10 @@
 
 // setTimeout() - Run Code After Delay
 // Syntax - setTimeout(callback, delay, ...args);
+function Delayfunction(){
+    console.log("Function Runs After 2 Seconds");
+};
+setTimeout(Delayfunction,2000);     //1 Seconds = 1000 MilliSeconds
 
 // clearTimeout() - Cancel a Timeout
 
@@ -16,5 +20,6 @@
 // Syntax - setInterval(callback, interval, ...args);
 
 // clearInterval() - Cancel an Interval 
+
 
 // Write a Function to Show 3 Seconds Countdown Timer
