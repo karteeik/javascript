@@ -14,10 +14,12 @@ function Delayfunction(){
 setTimeout(Delayfunction,2000);     //1 Seconds = 1000 MilliSeconds
 
 // clearTimeout() - Cancel a Timeout
+clearTimeout(Delayfunction());
 
 
 // setinterval() - Run Repeatedly at Intervals
 // Syntax - setInterval(callback, interval, ...args);
+
 
 // clearInterval() - Cancel an Interval 
 
