@@ -23,6 +23,14 @@ setInterval(() => {
 }, 1000);
 
 // clearInterval() - Cancel an Interval 
+const interval = setInterval(() => {
+  console.log("Repeating...");
+}, 1000);
+
+setTimeout(() => {
+  clearInterval(interval); // Stops after 5 seconds
+  console.log("Stopped repeating");
+}, 5000);
 
 
 // Write a Function to Show 3 Seconds Countdown Timer
