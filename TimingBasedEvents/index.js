@@ -8,20 +8,19 @@
 
 // setTimeout() - Run Code After Delay
 // Syntax - setTimeout(callback, delay, ...args);
-function Delayfunction(){
-    console.log("Function Runs After 2 Seconds");
-};
-setTimeout(Delayfunction,2000);     //1 Seconds = 1000 MilliSeconds
+// function Delayfunction(){
+//     console.log("Function Runs After 2 Seconds");
+// };
+// setTimeout(Delayfunction,2000);     //1 Seconds = 1000 MilliSeconds
+
+// clearTimeout() - Cancel a Timeout
+// clearTimeout(Delayfunction());
 
 // setinterval() - Run Repeatedly at Intervals
 // Syntax - setInterval(callback, interval, ...args);
 setInterval(() => {
   console.log("This runs every 1 second");
-}, 5000);
-
-
-// clearTimeout() - Cancel a Timeout
-// clearTimeout(Delayfunction());
+}, 1000);
 
 // clearInterval() - Cancel an Interval 
 
