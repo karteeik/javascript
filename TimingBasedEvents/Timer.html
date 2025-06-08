@@ -6,15 +6,21 @@
     <title>Timer</title>
 </head>
 <body>
-    <div class="container">
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
-        <button id="reset">Reset</button>
-        <button id="getTime">GetTime</button>
-        <button id="clearTime">ClearTime</button>
-    </div>
+    <section>
+        <p id="countDown">0</p>
+        <div class="btns">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="getTime">GetTime</button>
+            <button id="clearTime">ClearTime</button>
+        </div>
+        <div class="resetValue"></div>
+    </section>
 
     <script>
+        const countDown = document.getElementById('countDown');
+
         const startBtn = document.getElementById('start');
         const stopBtn = document.getElementById('stop');
         const resetBtn = document.getElementById('reset');
@@ -22,7 +28,8 @@
         const clearTimeBtn = document.getElementById('clearTime');
 
         startBtn.addEventListener('click',() => {
-            
+            let startCount = 0;
+            countDown.innerText = startCount++;
         });
     </script>
 </body>
