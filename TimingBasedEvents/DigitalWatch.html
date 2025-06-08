@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Watch</title>
+    <style>
+        #clock{
+            height: 100vh;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="clock"></div>
+
+    <script>
+        const CurrentTime = (()=>{
+            let curTime = new Date().toLocaleTimeString('en-US',{ hour12: true });
+            document.getElementById('clock').innerHTML = curTime;
+        });
+
+        CurrentTime();
+
+        const intervalID = setInterval(CurrentTime,1000);
+
+        // After 5 Seconds Clock is Off
+        // setTimeout(()=> clearInterval(intervalID),5000);
+    </script>
+
+</body>
+</html>
