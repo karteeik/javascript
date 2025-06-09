@@ -24,15 +24,35 @@
         const startBtn = document.getElementById('start');
         const stopBtn = document.getElementById('stop');
         const resetBtn = document.getElementById('reset');
-        const getTimeBtn = document.getElementById('getTime');
-        const clearTimeBtn = document.getElementById('clearTime');
+        // const getTimeBtn = document.getElementById('getTime');
+        // const clearTimeBtn = document.getElementById('clearTime');
+        let startCount = 0;
+        let intervalId;
 
-        startBtn.addEventListener('click',() => {
-            let startCount = 0;
-            countDown.innerText = startCount++;
-        });
+        // Start Timer Function
+        const startTimer = () => {
+            intervalId = setInterval(() => {
+                countDown.innerText = startCount++;
+            }, 1000);
+        };
 
-        
+        // Stop Timer Function
+        const stopTimer = () => {
+            clearInterval(intervalId);
+        };
+
+        // Reset Timer Function
+        const resetTimer = () => {
+            startCount = 0;
+            countDown.innerText = startCount;
+            clearInterval(intervalId);
+        };
+
+        startBtn.addEventListener('click',startTimer);
+        stopBtn.addEventListener('click',stopTimer);
+        resetBtn.addEventListener('click',resetTimer);
+
+
     </script>
 </body>
 </html>
