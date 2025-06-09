@@ -25,7 +25,7 @@
         const stopBtn = document.getElementById('stop');
         const resetBtn = document.getElementById('reset');
         const getTimeBtn = document.getElementById('getTime');
-        // const clearTimeBtn = document.getElementById('clearTime');
+        const clearTimeBtn = document.getElementById('clearTime');
 
         const resetValue = document.querySelector('.resetValue');
 
@@ -41,6 +41,7 @@
 
         // Stop Timer Function
         const stopTimer = () => {
+            getTimeTimer();
             clearInterval(intervalId);
         };
 
@@ -58,10 +59,16 @@
             resetValue.append(newPara);
         };
 
+        // Clear Display Stop Value
+        const clearTimeTimer = () => {
+            resetValue.innerText = "";
+        };
+
         startBtn.addEventListener('click',startTimer);
         stopBtn.addEventListener('click',stopTimer);
         resetBtn.addEventListener('click',resetTimer);
         getTimeBtn.addEventListener('click',getTimeTimer);
+        clearTimeBtn.addEventListener('click',clearTimeTimer);
 
     </script>
 </body>
