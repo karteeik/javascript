@@ -24,8 +24,11 @@
         const startBtn = document.getElementById('start');
         const stopBtn = document.getElementById('stop');
         const resetBtn = document.getElementById('reset');
-        // const getTimeBtn = document.getElementById('getTime');
+        const getTimeBtn = document.getElementById('getTime');
         // const clearTimeBtn = document.getElementById('clearTime');
+
+        const resetValue = document.querySelector('.resetValue');
+
         let startCount = 0;
         let intervalId;
 
@@ -48,10 +51,17 @@
             clearInterval(intervalId);
         };
 
+        // Reset Value Show Stop Value
+        const getTimeTimer = () => {
+            const newPara = document.createElement('p');
+            newPara.innerText = `This Stop Time is ${startCount - 1}`;
+            resetValue.append(newPara);
+        };
+
         startBtn.addEventListener('click',startTimer);
         stopBtn.addEventListener('click',stopTimer);
         resetBtn.addEventListener('click',resetTimer);
-
+        getTimeBtn.addEventListener('click',getTimeTimer);
 
     </script>
 </body>
