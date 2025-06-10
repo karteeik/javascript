@@ -53,3 +53,27 @@ let Student = {
     },
 }
 Student.sInfo();
+
+// Data Modeling 
+// Data modeling is the process of designing and organizing data for a system 
+const user = {
+    id: 101,
+    name: "Kartik Mangukiya",
+    email: "kartik@example.com",
+    isPremium: true,
+    address: {
+        city: "Surat",
+        state: "Gujarat",
+        pincode: "395007"
+    },
+    orders: [1001, 1002, 1003] // references to order IDs
+};
+
+const product = {
+    id: 501,
+    name: "Bluetooth Speaker",
+    price: 2999,
+    category: "Electronics",
+    inStock: true,
+    tags: ["music", "wireless", "portable"]
+};
