@@ -77,3 +77,19 @@ const product = {
     inStock: true,
     tags: ["music", "wireless", "portable"]
 };
+
+
+const post = {
+    id: 301,
+    title: "What is Data Modeling?",
+    body: "Data modeling is the process...",
+    author: {
+        id: 21,
+        name: "Kartik"
+    },
+    tags: ["database", "javascript", "design"],
+    comments: [
+        { userId: 22, text: "Very helpful!" },
+        { userId: 23, text: "Great explanation!" }
+    ]
+};
