@@ -43,7 +43,7 @@ setTimeout(()=>{
   clearInterval(intervalID);
 },5000);
 
-// Write a Function to Show 3 Seconds Countdown Timer
+// Write a Function to Show 5 Seconds Countdown Timer
 
 let second = 5;
 let timer = setInterval(() => {
