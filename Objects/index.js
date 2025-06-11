@@ -173,3 +173,4 @@ console.log(original);
 console.log(original == clone); //false because new object
 console.log(clone == clone0);   //true because same object reference assign
 
+// JSON - JavaScript Object Notation
