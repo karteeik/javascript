@@ -41,7 +41,7 @@ console.log(person);
 person.greet();
 
 // adding dynamic keys in Objects
-// dynamic key is Unique Value to represent Identity
+// dynamic key is Unique Value to represent Identity. This is useful when the key is stored in a variable or generated at runtime
 const idType = "collegeID";
 let Student = {
     [idType]: "A123456",  //dynamic key using must []
@@ -68,7 +68,11 @@ const user = {
     },
     orders: [1001, 1002, 1003] // references to order IDs
 };
+console.log(user);
+console.log(user.address);
+console.log(user.orders);
 
+// Data Model 1
 const product = {
     id: 501,
     name: "Bluetooth Speaker",
@@ -78,7 +82,7 @@ const product = {
     tags: ["music", "wireless", "portable"]
 };
 
-
+// Data Model 2
 const post = {
     id: 301,
     title: "What is Data Modeling?",
@@ -93,3 +97,79 @@ const post = {
         { userId: 23, text: "Great explanation!" }
     ]
 };
+console.log(post.comments[0].userId);
+console.log(post.comments[0].text);
+
+// Passed by Value: When you pass a primitive value to a function, a copy of the value is passed. Changes made inside the function do not affect the original variable.
+
+// Used for primitive data types:
+// Number, String, Boolean, null, undefined, Symbol, BigInt
+
+let a=10;
+function PassByValue(x) {
+    x=20;
+    console.log(x);   
+}
+PassByValue(a);
+console.log(a);     //x is just a copy of a, so changing x does not affect a
+
+// Passed by reference: When you pass an object or array, you're passing a reference to the same memory location.So changes inside the function will affect the original object.
+
+// Used for non-primitive data types (objects, arrays, functions)
+
+let obj = {name: "john"};
+
+function PassByReference(obj1) {
+    obj1.name = "due";
+    console.log(obj1);
+}
+PassByReference(obj);
+console.log(obj);   //The function modified the original object because it received a reference to it.
+
+// Important Clarification-----------------------------------------------------------------
+
+// In JavaScript, everything is technically passed by value
+// But for objects/arrays, the value being passed is a reference — so you still get reference-like behavior.
+
+let obj0 = {name: "arnab"};
+
+function ReassignValue(o) {
+    o = {name: "pratap"};
+    console.log(o);
+}
+ReassignValue(obj0);
+console.log(obj0.name);
+// Why not changed? Because o now points to a new object. The original reference is unchanged.
+
+// | Data Type      | Passing Type      | Behavior                                          |
+// | -------------- | ----------------- | ------------------------------------------------- |
+// | Primitive      | Pass by value     | Function gets a copy; original unchanged          |
+// | Object / Array | Pass by reference | Function gets reference; original can be modified |
+
+// Object.assign() in JavaScript
+// Object.assign() is a built-in method used to copy properties from one or more source objects into a target object.
+// Syntax - Object.assign(target, ...sources)
+// target: The object that will receive properties.
+// sources: One or more objects whose properties will be copied to the target.
+
+// Basic Usage
+const target = {a: 10};
+const sources = {b: 20,c: 30};
+
+const result = Object.assign(target,sources);
+console.log(target);
+console.log(sources);
+console.log(result);
+
+console.log(target == result);  //true because target assign result not new object
+
+
+// Cloning Objects (Shallow Copy)
+const original = {name: "dev", age: 20};
+const clone = Object.assign({},original);
+const clone0 = clone;  
+
+console.log(original);
+console.log(original == clone); //false because new object
+console.log(clone == clone0);   //true because same object reference assign
+
