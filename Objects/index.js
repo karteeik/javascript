@@ -17,9 +17,23 @@ let person = {
 };
 
 // console.log(person);
-// console.log(Object.keys(person));
-// console.log(Object.values(person));
-// console.log(Object.entries(person));
+console.log(Object.keys(person));
+console.log(Object.values(person));
+console.log(Object.entries(person));
+console.log(person.hasOwnProperty("name"));     //it return boolean value
+console.log(person.hasOwnProperty("isname"));     //it return boolean value
+
+
+// Object.freeze() in JavaScript
+// Object.freeze() is used to make an object immutable — meaning you cannot add, remove, or change its properties.
+let object1 = {
+    pId: 23131,
+    pName: "smith"
+};
+Object.freeze(object1);
+object1.pName = "powl";
+console.log(object1);
+
 
 // Access Object Properties Using Dot Notation and Square Bracket Notation
 // console.log(person.name);
@@ -197,13 +211,15 @@ const users = {
 //  Used in API communication, config files, storage (localStorage)
 
 // Convert Between Object and JSON
+
+// object to json (string)
 const ob = { name: "Kartik", age: 25 };
 const jsonStr = JSON.stringify(ob);
-console.log(jsonStr); // '{"name":"Kartik","age":25}'
+console.log(jsonStr); 
 
-const jsonStr = '{"name":"Kartik","age":25}';
-const obj = JSON.parse(jsonStr);
-console.log(obj); // { name: "Kartik", age: 25 }
-
+// json to object (parse)
+const data = '{"name":"Kartik","age":2}';
+const objData = JSON.parse(data);
+console.log(objData);
 
 
