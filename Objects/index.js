@@ -173,4 +173,31 @@ console.log(original);
 console.log(original == clone); //false because new object
 console.log(clone == clone0);   //true because same object reference assign
 
+// JavaScript Object
+const users = {
+  name: "Kartik",
+  age: 25,
+  isAdmin: true,
+  greet: function () {
+    console.log("Hello");
+  }
+};
+// Can include functions, methods, undefined, etc.
+// Used in your code directly
+
 // JSON - JavaScript Object Notation
+// {
+//   "name": "Kartik",
+//   "age": 25,
+//   "isAdmin": true
+// }
+//  No functions
+//  All keys must be in double quotes
+//  Pure data only
+//  Used in API communication, config files, storage (localStorage)
+
+const ob = { name: "Kartik", age: 25 };
+const jsonStr = JSON.stringify(ob);
+console.log(jsonStr); // '{"name":"Kartik","age":25}'
+
+
