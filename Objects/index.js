@@ -196,8 +196,14 @@ const users = {
 //  Pure data only
 //  Used in API communication, config files, storage (localStorage)
 
+// Convert Between Object and JSON
 const ob = { name: "Kartik", age: 25 };
 const jsonStr = JSON.stringify(ob);
 console.log(jsonStr); // '{"name":"Kartik","age":25}'
+
+const jsonStr = '{"name":"Kartik","age":25}';
+const obj = JSON.parse(jsonStr);
+console.log(obj); // { name: "Kartik", age: 25 }
+
 
 
