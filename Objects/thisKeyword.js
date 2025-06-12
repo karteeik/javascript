@@ -68,4 +68,3 @@ show.apply(person); // Kartik
 
 const newFn = show.bind(person);
 newFn(); // Kartik
-
