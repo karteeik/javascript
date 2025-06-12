@@ -74,6 +74,8 @@ let userDetails = {
     age: 21,
     designation: "developer",
     printDetails: function(){
-
+        console.log(this);
     },
 };
+
+userDetails.printDetails();
