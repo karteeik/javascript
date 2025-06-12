@@ -18,7 +18,7 @@ const user = {
     console.log(this.name);
   }
 };
-user.greet(); // "Kartik"  this refers to the object (user) that owns the method.
+user.greet(); // "Kartik" - this refers to the object (user) that owns the method.
 
 // 4. this in Arrow Functions
 const users = {
@@ -57,14 +57,23 @@ users.greet(); // undefined   In arrow functions, this is not bound to the objec
 // });
 
 // 8. this with call(), apply(), bind()
-function show() {
-  console.log(this.name);
-}
+// function show() {
+//   console.log(this.name);
+// }
 
-const person = { name: "Kartik" };
+// const person = { name: "Kartik" };
 
-show.call(person);  // Kartik
-show.apply(person); // Kartik
+// show.call(person);  // Kartik
+// show.apply(person); // Kartik
 
-const newFn = show.bind(person);
-newFn(); // Kartik
+// const newFn = show.bind(person);
+// newFn(); // Kartik
+
+let userDetails = {
+    name: "john due",
+    age: 21,
+    designation: "developer",
+    printDetails: function(){
+
+    },
+};
