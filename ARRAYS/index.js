@@ -53,7 +53,7 @@ let frdsw=["raj","mohan","rahul","pavan","madhur"];
 //      //logic here
 // });
 frdsw.forEach((currentele,index,arr)=>{
-    // console.log(`${currentele} ${index}`)
+    console.log(`${currentele} ${index}`)
     console.log(arr);
 });
 

@@ -1,6 +1,8 @@
 // this refers to the object that is executing the current function.
 // But the meaning of this changes based on how and where the function is called..........
 
+const { use } = require("react");
+
 // 1. this in Global Scope
 console.log(this);  // In browser: Window object
 
@@ -57,25 +59,63 @@ users.greet(); // undefined   In arrow functions, this is not bound to the objec
 // });
 
 // 8. this with call(), apply(), bind()
-// function show() {
-//   console.log(this.name);
-// }
 
-// const person = { name: "Kartik" };
+// call() function used like borrowing of function
 
-// show.call(person);  // Kartik
-// show.apply(person); // Kartik
+// Use 1 
+// let userDetails = {
+//     name: "john due",
+//     age: 21,
+//     designation: "developer",
+//     printDetails: function(){
+//         console.log(this);
+//     },
+// };
+// userDetails.printDetails();
+// let userDetails2 = {
+//     name: "vijay singh",
+//     age: 22,
+//     designation: "developer",
+// };
+// let userDetails3 = {
+//     name: "vinod singh",
+//     age: 22,
+//     designation: "developer",
+// };
 
-// const newFn = show.bind(person);
-// newFn(); // Kartik
+// userDetails.printDetails.call(userDetails2);
+// userDetails.printDetails.call(userDetails3);
 
-let userDetails = {
+// Use 2 - function is outside of object
+const printDetails = function(city,country){
+        console.log(this.name+" "+ city+" "+ country);
+};
+let userDetails0 = {
     name: "john due",
     age: 21,
     designation: "developer",
-    printDetails: function(){
-        console.log(this);
-    },
 };
 
-userDetails.printDetails();
+let userDetails1 = {
+    name: "vijay singh",
+    age: 22,
+    designation: "developer",
+};
+
+let userDetails2 = {
+    name: "vinod singh",
+    age: 22,
+    designation: "developer",
+};
+
+// functionName.call(obj); - we passed lots of args
+// printDetails.call(userDetails0,"Surat","India");
+// printDetails.call(userDetails1);
+// printDetails.call(userDetails2);
+
+// apply() function - Same as call(), but takes arguments as an array.
+// printDetails.apply(userDetails0,["Surat","India"]);
+
+// bind() function - You want to call the function later
+let bindFun = printDetails.bind(userDetails0,"Surat","India");
+bindFun();
