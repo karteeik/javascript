@@ -90,6 +90,7 @@ users.greet(); // undefined   In arrow functions, this is not bound to the objec
 const printDetails = function(city,country){
         console.log(this.name+" "+ city+" "+ country);
 };
+
 let userDetails0 = {
     name: "john due",
     age: 21,
@@ -118,4 +119,4 @@ let userDetails2 = {
 
 // bind() function - You want to call the function later
 let bindFun = printDetails.bind(userDetails0,"Surat","India");
-bindFun();
+bindFun();  
