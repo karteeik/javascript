@@ -1,8 +1,6 @@
 // this refers to the object that is executing the current function.
 // But the meaning of this changes based on how and where the function is called..........
 
-const { use } = require("react");
-
 // 1. this in Global Scope
 console.log(this);  // In browser: Window object
 

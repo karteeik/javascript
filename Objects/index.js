@@ -179,8 +179,23 @@ console.log(target == result);  //true because target assign result not new obje
 
 
 // Cloning Objects (Shallow Copy)
-const original = {name: "dev", age: 20};
+const original = {
+  name: "John",
+  address: {
+    city: "Delhi",
+    zip: 110001
+  }
+};
+// const clone = {...original};
 const clone = Object.assign({},original);
+
+// changing is affect original
+clone.name = "Due";
+console.log(clone);     //name is String passed by value
+
+clone.address.city = "Surat";
+console.log(clone);     //address is object passed by reference
+
 const clone0 = clone;  
 
 console.log(original);
@@ -223,3 +238,29 @@ const objData = JSON.parse(data);
 console.log(objData);
 
 
+// Interview questions
+
+// write a function to given object with new subject and which subject is here present or not.
+let student = {
+    sName: "john",
+    age: 21,
+    gender: "male",
+    subject: {
+        maths: 50,
+        science: 49,
+        history: 46,
+    },
+};
+
+const addNewSub = (student,sub,marks) => {
+    if(student.subject.hasOwnProperty(sub))
+        console.log(`Subject ${sub} is already present with marks: ${marks}`);
+    else{
+        student.subject[sub] = marks;
+        console.log(`Subject ${sub} added Successfully.`);
+    }
+    console.log(student);
+};
+
+// addNewSub(student,"computer",44);
+addNewSub(student,"history",46);
