@@ -29,5 +29,5 @@
 // Functions are invoked.
 
 // (i) Call Stack - Data Structure LIFO(pushed,popped), Stack Overflow
-// (ii) Heap Memory - An area in Memory used to store Objects, Arrays and Functions.
+// (ii) Heap Memory - Unstructured memory used to store objects, arrays, and functions. JS engine uses Garbage Collection to clear unused memory in the heap.
 
