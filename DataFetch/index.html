@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Management</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            /* Light background */
+            color: #333;
+            /* Dark text */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #007bff;
+            /* Blue color for the heading */
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            /* Gray color for subtitle */
+            margin-bottom: 40px;
+        }
+
+        /* Buttons */
+        button {
+            margin: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            /* Blue background */
+            color: white;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        /* Data Table */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            /* White background for table */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            /* Blue header */
+            color: white;
+        }
+
+        td {
+            border-bottom: 1px solid #ddd;
+            /* Light gray border */
+            color: #333;
+            /* Dark text */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+            /* Light gray on hover */
+            transition: 0.3s;
+        }
+
+        /* Data Containers */
+        .data-container {
+            margin-top: 20px;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            /* Light gray track */
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #007bff;
+            /* Blue scrollbar thumb */
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+            /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>College Management System</h1>
+        <p class="subtitle">Fetch Student, Course, and Faculty Data</p>
+
+        <!-- Buttons to fetch data -->
+        <button id="fetchJSON">Fetch Student Data (JSON)</button>
+        <button id="fetchXML">Fetch Course Data (XML)</button>
+        <button id="fetchTXT">Fetch Faculty Data (TXT)</button>
+
+        <!-- Data Display -->
+        <div id="json-container" class="data-container"></div>
+        <div id="xml-container" class="data-container"></div>
+        <div id="txt-container" class="data-container"></div>
+    </div>
+
+    <script>
+         // Fetch Student Data (JSON)
+        document.getElementById("fetchJSON").addEventListener('click', function () {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    let data = JSON.parse(this.responseText);
+                    displayJSONData(data);
+                }
+            };
+
+            function displayJSONData(data) {
+                let table = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Birth Date</th>
+                                <th>Mobile No</th>
+                                <th>Stream</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+
+                for (let i in data.Student_data) {
+                    table += `
+                        <tr>
+                            <td>${data.Student_data[i].First_name}</td>
+                            <td>${data.Student_data[i].Last_name}</td>
+                            <td>${data.Student_data[i].Birth_date}</td>
+                            <td>${data.Student_data[i].Mobile_no}</td>
+                            <td>${data.Student_data[i].Stream}</td>
+                            <td>${data.Student_data[i].Email}</td>
+                        </tr>`;
+                }
+
+                table += `</tbody></table>`;
+                document.getElementById("json-container").innerHTML = table;
+            }
+
+            xhr.open('GET', 'data.json', true);
+            xhr.send();
+        });
+
+        // Fetch Course Data (XML)
+        document.getElementById("fetchXML").addEventListener('click', function () {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    displayXMLData(this.responseXML);
+                }
+            };
+
+            function displayXMLData(xml) {
+                let courses = xml.getElementsByTagName("Course");
+                let table = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Name</th>
+                                <th>Faculty</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+
+                for (let i = 0; i < courses.length; i++) {
+                    let code = courses[i].getElementsByTagName("Code")[0].textContent;
+                    let name = courses[i].getElementsByTagName("Name")[0].textContent;
+                    let faculty = courses[i].getElementsByTagName("Faculty")[0].textContent;
+
+                    table += `
+                        <tr>
+                            <td>${code}</td>
+                            <td>${name}</td>
+                            <td>${faculty}</td>
+                        </tr>`;
+                }
+
+                table += `</tbody></table>`;
+                document.getElementById("xml-container").innerHTML = table;
+            }
+
+            xhr.open("GET", "data.xml", true);
+            xhr.send();
+        });
+
+        // Fetch Faculty Data (TXT)
+        document.getElementById("fetchTXT").addEventListener('click', function () {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    displayTXTData(this.responseText);
+                }
+            };
+
+            function displayTXTData(txt) {
+                let lines = txt.split("\n");
+                let table = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Experience</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+
+                for (let i = 0; i < lines.length; i += 4) {
+                    let id = lines[i]?.replace("ID: ", "").trim();
+                    let name = lines[i + 1]?.replace("Name: ", "").trim();
+                    let department = lines[i + 2]?.replace("Department: ", "").trim();
+                    let experience = lines[i + 3]?.replace("Experience: ", "").trim();
+
+                    if (id && name && department && experience) {
+                        table += `
+                            <tr>
+                                <td>${id}</td>
+                                <td>${name}</td>
+                                <td>${department}</td>
+                                <td>${experience}</td>
+                            </tr>`;
+                    }
+                }
+
+                table += `</tbody></table>`;
+                document.getElementById("txt-container").innerHTML = table;
+            }
+
+            xhr.open("GET", "data.txt", true);
+            xhr.send();
+        });
+    </script>
+</body>
+</html>

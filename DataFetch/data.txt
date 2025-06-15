@@ -1,0 +1,40 @@
+ID: F001  
+Name: Dr. Anil Mehta  
+Department: Computer Science  
+Experience: 15 years  
+ID: F002  
+Name: Prof. Sneha Patel  
+Department: Information Technology  
+Experience: 12 years  
+ID: F003  
+Name: Dr. Rajesh Kumar  
+Department: Business Administration  
+Experience: 18 years  
+ID: F004  
+Name: Dr. Rina Das  
+Department: Artificial Intelligence  
+Experience: 10 years  
+ID: F005  
+Name: Dr. Amit Goel  
+Department: Finance  
+Experience: 20 years  
+ID: F006  
+Name: Prof. Nisha Kapoor  
+Department: Physics  
+Experience: 14 years  
+ID: F007  
+Name: Dr. Arvind Sharma  
+Department: Cloud Computing  
+Experience: 17 years  
+ID: F008  
+Name: Prof. Meera Sinha  
+Department: Cyber Security  
+Experience: 9 years  
+ID: F009  
+Name: Dr. Vinod Malhotra  
+Department: Accounting  
+Experience: 22 years  
+ID: F010  
+Name: Dr. Preeti Raghavan  
+Department: Machine Learning  
+Experience: 13 years

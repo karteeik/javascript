@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CollegeManagement>
+    <Courses>
+        <Course>
+            <Code>BCA101</Code>
+            <Name>Web Development</Name>
+            <Faculty>Dr. Anil Mehta</Faculty>
+        </Course>
+        <Course>
+            <Code>MCA202</Code>
+            <Name>Data Structures</Name>
+            <Faculty>Prof. Sneha Patel</Faculty>
+        </Course>
+        <Course>
+            <Code>BBA303</Code>
+            <Name>Business Analytics</Name>
+            <Faculty>Dr. Rajesh Kumar</Faculty>
+        </Course>
+        <Course>
+            <Code>BTECH404</Code>
+            <Name>Artificial Intelligence</Name>
+            <Faculty>Dr. Rina Das</Faculty>
+        </Course>
+        <Course>
+            <Code>MBA505</Code>
+            <Name>Financial Management</Name>
+            <Faculty>Dr. Amit Goel</Faculty>
+        </Course>
+        <Course>
+            <Code>BSC606</Code>
+            <Name>Physics</Name>
+            <Faculty>Prof. Nisha Kapoor</Faculty>
+        </Course>
+        <Course>
+            <Code>MTECH707</Code>
+            <Name>Cloud Computing</Name>
+            <Faculty>Dr. Arvind Sharma</Faculty>
+        </Course>
+        <Course>
+            <Code>BCA808</Code>
+            <Name>Cyber Security</Name>
+            <Faculty>Prof. Meera Sinha</Faculty>
+        </Course>
+        <Course>
+            <Code>MCOM909</Code>
+            <Name>Advanced Accounting</Name>
+            <Faculty>Dr. Vinod Malhotra</Faculty>
+        </Course>
+        <Course>
+            <Code>MSC1010</Code>
+            <Name>Machine Learning</Name>
+            <Faculty>Dr. Preeti Raghavan</Faculty>
+        </Course>
+    </Courses>
+</CollegeManagement>

@@ -1,0 +1,94 @@
+{
+    "Student_data": [
+        {
+            "First_name": "Rahul",
+            "Last_name": "Sharma",
+            "Birth_date": "2003-05-14",
+            "Mobile_no": "9876543210",
+            "Stream": "BCA",
+            "Email": "rahul@gmail.com",
+            "password": "rahul123"
+        },
+        {
+            "First_name": "Pooja",
+            "Last_name": "Verma",
+            "Birth_date": "2002-11-22",
+            "Mobile_no": "9765432109",
+            "Stream": "MCA",
+            "Email": "pooja@gmail.com",
+            "password": "pooja456"
+        },
+        {
+            "First_name": "Amit",
+            "Last_name": "Singh",
+            "Birth_date": "2001-09-10",
+            "Mobile_no": "9654321098",
+            "Stream": "BBA",
+            "Email": "amit@gmail.com",
+            "password": "amit789"
+        },
+        {
+            "First_name": "Neha",
+            "Last_name": "Gupta",
+            "Birth_date": "2004-03-18",
+            "Mobile_no": "9543210987",
+            "Stream": "B.Tech",
+            "Email": "neha@gmail.com",
+            "password": "neha101"
+        },
+        {
+            "First_name": "Vikram",
+            "Last_name": "Kumar",
+            "Birth_date": "2000-07-05",
+            "Mobile_no": "9432109876",
+            "Stream": "MBA",
+            "Email": "vikram@gmail.com",
+            "password": "vikram202"
+        },
+        {
+            "First_name": "Sneha",
+            "Last_name": "Patel",
+            "Birth_date": "2003-08-12",
+            "Mobile_no": "9321098765",
+            "Stream": "B.Sc",
+            "Email": "sneha@gmail.com",
+            "password": "sneha303"
+        },
+        {
+            "First_name": "Rohan",
+            "Last_name": "Mehta",
+            "Birth_date": "2002-01-22",
+            "Mobile_no": "9210987654",
+            "Stream": "M.Tech",
+            "Email": "rohan@gmail.com",
+            "password": "rohan404"
+        },
+        {
+            "First_name": "Divya",
+            "Last_name": "Singh",
+            "Birth_date": "2001-06-30",
+            "Mobile_no": "9109876543",
+            "Stream": "B.Com",
+            "Email": "divya@gmail.com",
+            "password": "divya505"
+        },
+        {
+            "First_name": "Arjun",
+            "Last_name": "Rathod",
+            "Birth_date": "2003-09-15",
+            "Mobile_no": "9098765432",
+            "Stream": "BCA",
+            "Email": "arjun@gmail.com",
+            "password": "arjun606"
+        },
+        {
+            "First_name": "Kavita",
+            "Last_name": "Desai",
+            "Birth_date": "2002-12-08",
+            "Mobile_no": "8987654321",
+            "Stream": "M.Sc",
+            "Email": "kavita@gmail.com",
+            "password": "kavita707"
+        }
+    ]
+}
