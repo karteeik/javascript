@@ -1,32 +1,42 @@
-// How JS Works..............
+// How JavaScript Works...
 
 // Our JavaScript Code -->
 
-// Parsing Phase (by JavaScript Engine) -->
+// Parsing Phase (by JavaScript Engine):
 // Step 1: Lexical Analysis (Tokenizing)
-//        JS code is split into meaningful tokens.
+//         JavaScript code is split into meaningful tokens.
 
 // Step 2: Syntax Parsing
-//        Tokens are checked for syntax errors.
-//        Then, an Abstract Syntax Tree (AST) is created.
+//         Tokens are checked for syntax correctness.
+//         Then, an Abstract Syntax Tree (AST) is created.
 
-// Compilation Phase -->
-//        Using JIT (Just-In-Time) Compiler,
-//        AST is converted into Intermediate Code or
-//        optimized Machine Code (via Bytecode in modern engines like V8).
+// Compilation Phase:
+//         Using JIT (Just-In-Time) Compiler,
+//         The AST is converted into Intermediate Code,
+//         then optimized into Machine Code (or Bytecode in engines like V8).
 
-// Execution Phase -->
-// Execution Phase - In Execution Phase, We Have Call Stack With 
+// Execution Contexts:
+//         During execution, the engine sets up Execution Contexts and uses:
 
-// (1) Creation Phase -->
-// Memory is allocated for variables and functions.
-// Functions are hoisted.
-// Variables are hoisted and set to undefined.
+// (1) Creation Phase:
+//         Memory is allocated for variables and functions.
+//         Function declarations are hoisted (stored in memory completely).
+//         Variable declarations are hoisted but initialized as undefined.
 
-// (2) Execution Contexts -->
-// Code is executed line-by-line.
-// Values are assigned to variables.
-// Functions are invoked.
+// (2) Execution Phase:
+//         Code is executed line-by-line.
+//         Variables are assigned actual values.
+//         Functions are invoked and contexts are created.
 
-// (i) Call Stack - Data Structure LIFO(pushed,popped), Stack Overflow (Tracks function calls (not object values))
-// (ii) Heap Memory - Unstructured memory used to store objects, arrays, and functions. JS engine uses Garbage Collection to clear unused memory in the heap.
+// Memory Management Involves:
+
+// (i) Call Stack:
+//         A data structure (LIFO - Last In, First Out).
+//         Tracks function calls via Execution Contexts.
+//         When the stack gets too deep → Stack Overflow.
+
+// (ii) Heap Memory:
+//         An unstructured memory area used to store:
+//         objects, arrays, and functions.
+//         Managed by JavaScript's Garbage Collector
+//         to free up unused memory and avoid memory leaks.
