@@ -1,12 +1,12 @@
 // Scope - Scope determines where variables, functions, and objects are accessible in your code.
 
-// 1 - Global Scope
+// 1 - Global Scope (Entire Mall)
 // Declared outside of any function or block & Accessible everywhere in your code.
 
-// 2 - Function Scope
+// 2 - Function Scope (Specific Shop)
 // Variables declared inside a function are only accessible inside that function.
 
-// 3 - Block Scope (ES6+)
+// 3 - Block Scope (ES6+) (Storage Room inside the Shop)
 // introduced with let and const.
 // Variables declared inside {} are only accessible inside that block.
 
