@@ -88,11 +88,30 @@ function createBankAccount(ownerName, initialBalance){
         depositAmount: function(amount){
             if(amount > 0){
                 balance += amount;
-                return 
+                return `Rs.${amount} Deposited Successfully`;
+            }
+            else{
+                return `Invalid amount`;
             }
         },
+
+        withdraw: function(amount){
+            if(amount > 0 && amount <= balance){
+                balance -= amount;
+                return `Rs.${amount} Withdraw Successfully`;
+            }
+            else{
+                return `Insufficient balance or invalid amount`;
+            }
+        }
     };
 };
 
 const bankDetails = createBankAccount("john Due",1000);
+console.log(bankDetails.balance);   // Undefined because private variable
+
+bankDetails.getBalance();
+console.log(bankDetails.depositAmount(200));
+bankDetails.getBalance();
+console.log(bankDetails.withdraw(1500));
 bankDetails.getBalance();
