@@ -17,7 +17,7 @@ console.log($myAge);
 
 // 3 ways to declare variable
 
-// (1)-(var) keyword
+// (1)-(var) keyword (Function Scope)
 // ->if we use var keyword to declare variable then this variable 
 //   (i)declare multiple Time
 //   (ii)values assign multiple Time
@@ -26,7 +26,7 @@ var a=30;
 var a="john"
 console.log(a)
 
-// (2)-(let) keyword
+// (2)-(let) keyword (Block Scope)
 // ->if we use let keyword to declare variable then this variable 
 //   (i)declare only one time
 //   (ii)values assign multiple Time
@@ -36,7 +36,7 @@ let b=100;
     b=423432;
 console.log(b)
 
-// (3)-(const) keyword
+// (3)-(const) keyword (Block Scope)
 // ->if we use const keyword to declare variable then this variable 
 //   (i)declare only one time Time
 //   (ii)values assign only one Time
