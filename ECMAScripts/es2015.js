@@ -17,3 +17,5 @@ console.log(third);
 
 // swipe two numbers using third var
 const a = 10;
+
+// renaming 
