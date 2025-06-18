@@ -15,3 +15,5 @@ console.log(first);
 console.log(second);
 console.log(third);
 
+// swipe two numbers using third var
+const a = 10;
