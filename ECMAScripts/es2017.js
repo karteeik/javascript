@@ -17,7 +17,7 @@ console.log(Object.entries(user)); // [["name", "John"], ["age", 25]]
 
 
 // 3. String.prototype.padStart() and padEnd()
-// Adds padding (characters) at the start or end of a string.
+// Adds padding (characters) at the start or end of a string. 
 console.log("35".padStart(6, "0"));  // "005"
 console.log("5".padEnd(3, "0"));  // "500"
 // Useful for formatting numbers, codes, or tables.
