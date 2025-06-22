@@ -16,6 +16,8 @@ async function fetchAll() {
 
 
 // 2. Rest/Spread Properties for Objects
+
+// Object Rest
 const user = { name: "John", age: 30, city: "Delhi" };
 const { name, ...rest } = user;
 console.log(rest); // { age: 30, city: "Delhi" }
@@ -41,8 +43,14 @@ fetch("https://api.example.com")
 // s (dotAll) flag:
 // Makes . match newline characters too.
 const str = "Hello\nWorld";
+
+// Case 1: Without s flag
 console.log(/Hello.World/.test(str));      // false
+// The regex . (dot) matches any character except newline (\n) by default.
+
+// Case 2: With s (dotAll) flag
 console.log(/Hello.World/s.test(str));     // true
+// Adding the s flag means dot will also match newline (\n).
 
 // Named capture groups:
 // Name parts of your regex match.
