@@ -205,3 +205,48 @@ console.log(strChek.startsWith("hel"));
 // endswith() method - Checks if string ends with substring
 // not support regular expression
 console.log(strChek.endsWith("  "));   //end with some spaces
+
+// REGEX - A regex is a pattern that describes a set of strings.
+// emails
+// phone numbers
+// dates
+// words
+
+// Common Regex Symbol
+// | Symbol | Meaning                       | Example   | Matches             |       |                |
+// | ------ | ----------------------------- | --------- | ------------------- | ----- | -------------- |
+// | `.`    | Any character                 | `c.t`     | `cat`, `cut`, `cot` |       |                |
+// | `\d`   | Digit (0-9)                   | `\d\d`    | `23`, `99`          |       |                |
+// | `\w`   | Word char (a-z, A-Z, 0-9, \_) | `\w+`     | `hello123`          |       |                |
+// | `\s`   | Whitespace                    | `\s+`     | space, tab          |       |                |
+// | `^`    | Start of string               | `^Hi`     | Matches `"Hi John"` |       |                |
+// | `$`    | End of string                 | `end$`    | `"The end"`         |       |                |
+// | `+`    | One or more                   | `\d+`     | `123`, `9`          |       |                |
+// | `*`    | Zero or more                  | `a*`      | `""`, `a`, `aa`     |       |                |
+// | `?`    | Optional                      | `colou?r` | `color`, `colour`   |       |                |
+// | `[]`   | Character set                 | `[aeiou]` | `a`, `e`, `i`       |       |                |
+// | \`     | \`                            | OR        | \`cat               | dog\` | `cat` or `dog` |
+// | `()`   | Grouping                      | `(ab)+`   | `abab`, `ab`        |       |                |
+
+
+// | Task                 | Regex Example      | Matches             |
+// | -------------------- | ------------------ | ------------------- |
+// | Find digits          | `/\d+/`            | `"Age: 23"` → `23`  |
+// | Validate email       | `/^\S+@\S+\.\S+$/` | `hello@email.com`   |
+// | Match "cat" or "bat" | `/[cb]at/`         | `"cat"`, `"bat"`    |
+// | Replace all spaces   | `/ /g`             | `"a b c"` → `"abc"` |
+
+// Email Validate
+
+const myEmail = "john@gmail.com";
+const pattern = /^\S+@\S+\.\S+$/;
+
+console.log(pattern.test(myEmail));
+
+// Common Regex Flags
+// | Flag | Meaning                       | Example          | Result                       |
+// | ---- | ----------------------------- | ---------------- | ---------------------------- |
+// | `g`  | Global – match all            | `/hello/g`       | All `"hello"`                |
+// | `i`  | Case-insensitive              | `/hello/i`       | Matches `"Hello"`, `"HELLO"` |
+// | `m`  | Multiline mode                | `/^hi/m`         | Matches `"hi"` at line start |
+// | `s`  | Dot-all (dot matches newline) | `/hello.world/s` | `"hello\nworld"` ✅           |
