@@ -8,8 +8,8 @@ console.log(devices.includes("mobile"));
 // true
 
 console.log(devices.includes("pc"));
-// false
-
+// false   
+  
 // 2. Exponentiation Operator **
 // A shorthand for power/exponent (Math.pow).
 
