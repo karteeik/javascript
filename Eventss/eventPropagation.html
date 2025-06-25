@@ -72,7 +72,8 @@ Then, the event bubbles back up from the target to the top (document).
         console.log("Child clicked");
       });
 
-      document.getElementById("btn").addEventListener("click", () => {
+      document.getElementById("btn").addEventListener("click", (event) => {
+        event.stopPropagation();
         console.log("Btn clicked");
       });
     </script>
