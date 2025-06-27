@@ -1,22 +1,3 @@
-<!-- 
-Event Propagation
-
-Event propagation is how events move through the DOM tree (your HTML elements) when you click or interact with an element.
-
-There are 3 phases of event propagation:
-
-1. Capturing Phase (Capture / Trickling Down)
-The event starts at the top (document) and moves down toward the target element.
-
-2. Target Phase
-The event reaches the exact element you interacted with (the "target").
-
-3. Bubbling Phase (Bubble Up)
-Then, the event bubbles back up from the target to the top (document).
---> 
-
-<!-- Visual Example -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -47,6 +28,24 @@ Then, the event bubbles back up from the target to the top (document).
     </style>
   </head>
   <body>
+    <!-- 
+Event Propagation
+
+Event propagation is how events move through the DOM tree (your HTML elements) when you click or interact with an element.
+
+There are 3 phases of event propagation:
+
+1. Capturing Phase (Capture / Trickling Down)
+The event starts at the top (document) and moves down toward the target element.
+
+2. Target Phase
+The event reaches the exact element you interacted with (the "target").
+
+3. Bubbling Phase (Bubble Up) (by default)
+Then, the event bubbles back up from the target to the top (document).
+-->
+
+    <!-- Visual Example -->
     <div id="parent">
       <div id="child">
         <button id="btn">Click Me</button>
@@ -63,19 +62,46 @@ Then, the event bubbles back up from the target to the top (document).
     -->
 
     <script>
-      document.getElementById("parent").addEventListener("click", (e) => {
-        console.log("Parent clicked");
-        e.stopPropagation();
-      });
 
-      document.getElementById("child").addEventListener("click", () => {
-        console.log("Child clicked");
-      });
+      function callParent(event) {
+          console.table([
+            {
+              Description: "I am Parent",
+              Target: event.target,
+              CurrentTarget: event.currentTarget,
+            },
+          ]);
+        };
+      function callChild(event) {
+          console.table([
+            {
+              Description: "I am Child",
+              Target: event.target,
+              CurrentTarget: event.currentTarget,
+            },
+          ]);
+          // event.stopPropagation();
+        };
+      function callBtn(event) {
+          console.table([
+            {
+              Description: "I am Btn",
+              Target: event.target,
+              CurrentTarget: event.currentTarget,
+            },
+          ]);
+          // event.stopPropagation();
+        };
 
-      document.getElementById("btn").addEventListener("click", (event) => {
-        event.stopPropagation();
-        console.log("Btn clicked");
-      });
+      // document.getElementById("parent").addEventListener("click", callParent);
+      // document.getElementById("child").addEventListener("click", callChild);
+      // document.getElementById("btn").addEventListener("click", callBtn);
+
+      // if you want to event propagation way of top to bottom then use capturing phase
+      document.getElementById("parent").addEventListener("click", callParent, true);
+      document.getElementById("child").addEventListener("click", callChild, {capture: true});
+      document.getElementById("btn").addEventListener("click", callBtn, true);
+
     </script>
   </body>
 </html>
