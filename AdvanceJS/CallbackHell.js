@@ -5,10 +5,14 @@ functionA(function() {
   functionB(function() {
     functionC(function() {
       functionD(function() {
-        // 😵 you get lost here!
+        // you get lost here!
       });
     });
   });
 });
 
 // This creates a "pyramid" or "staircase" shape in your code → hard to read, debug, or maintain.
+
+// Hard to read
+// Hard to debug
+// Error handling becomes tricky
