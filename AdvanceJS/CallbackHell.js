@@ -11,8 +11,11 @@ functionA(function() {
   });
 });
 
-// This creates a "pyramid" or "staircase" shape in your code → hard to read, debug, or maintain.
+// This creates a "pyramid" or "staircase" shape in your code
 
 // Hard to read
 // Hard to debug
 // Error handling becomes tricky
+
+// Solution & How to Fix this problem
+// Use Promises or async/await
