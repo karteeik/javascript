@@ -42,3 +42,41 @@
 //     // failure
 //   });
 
+// Why Promises are Better Than Callbacks:
+// | Callback Hell            | Promises                      |
+// | ------------------------ | ----------------------------- |
+// | Messy and nested         | Clean and chainable `.then()` |
+// | Hard to handle errors    | `.catch()` handles all errors |
+// | Not reusable or readable | More structured and readable  |
+
+// The Task - Get user info → Get orders for that user → Calculate total → Show total
+
+// Using Callbacks
+function getUser(callback) {
+  setTimeout(() => {
+    callback({ id: 1, name: "Kartik" });
+  }, 1000);
+}
+
+function getOrders(userId, callback) {
+  setTimeout(() => {
+    callback([100, 200, 300]);
+  }, 1000);
+}
+
+function calculateTotal(orders, callback) {
+  setTimeout(() => {
+    const total = orders.reduce((a, b) => a + b, 0);
+    callback(total);
+  }, 1000);
+}
+
+// 👇 Callback Hell starts here
+getUser(function(user) {
+  getOrders(user.id, function(orders) {
+    calculateTotal(orders, function(total) {
+      console.log("Total is:", total); // 👉 "Total is: 600"
+    });
+  });
+});
+
