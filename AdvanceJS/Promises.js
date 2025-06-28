@@ -26,3 +26,19 @@
 // | --------- | --------------------------------- |
 // | `resolve` | Call this when task **succeeds**  |
 // | `reject`  | Call this when task **fails**     |
+
+// Summery of How to Use Promises
+// 1. Create a Promise
+// const promise = new Promise((resolve, reject) => {
+//   // do something
+// });
+
+// // 2. Handle result
+// promise
+//   .then(result => {
+//     // success
+//   })
+//   .catch(error => {
+//     // failure
+//   });
+
