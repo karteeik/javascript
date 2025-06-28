@@ -12,3 +12,17 @@
 // const promise = new Promise(function (resolve, reject) {
   // async task
 // });
+
+// Promise States
+// A Promise goes through 3 states:
+// | State       | Meaning                              |
+// | ----------- | ------------------------------------ |
+// | `pending`   | Still waiting                        |
+// | `fulfilled` | Successfully completed (`resolve`)   |
+// | `rejected`  | Failed with an error (`reject`)      |
+
+
+// | Argument  | Purpose                           |
+// | --------- | --------------------------------- |
+// | `resolve` | Call this when task **succeeds**  |
+// | `reject`  | Call this when task **fails**     |
