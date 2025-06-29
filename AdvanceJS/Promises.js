@@ -10,8 +10,13 @@
 
 // Syntax -
 // const promise = new Promise(function (resolve, reject) {
-// async task
+//    async task
 // });
+
+// new Promise - promise constructor
+// function - Executor function
+// resolve - function to call on successful completion of an operation 
+// reject - function to call if an operations fails (error)
 
 // Promise States
 // A Promise goes through 3 states:
@@ -49,7 +54,7 @@
 // Simple Example
 
 const myPromise = new Promise((resolve, reject) => {
-  const success = true;
+  const success = false;
 
   if (success) {
     resolve("Task Completed....");
@@ -58,13 +63,17 @@ const myPromise = new Promise((resolve, reject) => {
   }
 });
 
+// if you'e add directlly atteched to creation of promises
 myPromise
-  .then(function (result) {
+.then(function (result) {
     console.log(result);
   })
   .catch(function (error) {
     console.log(error);
-  });
+  })
+  .finally(function (){
+    console.log("This part is Finally Execute");
+  })
 
 // Why Promises are Better Than Callbacks:
 // | Callback Hell            | Promises                      |
