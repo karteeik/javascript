@@ -2,15 +2,15 @@
 
 // Why Do We Need Promises?
 // Because JavaScript is asynchronous — it doesn't wait for slow things like:
-// Fetching data from the internet 
-// Waiting for a file to load 
-// Using setTimeout() 
+// Fetching data from the internet
+// Waiting for a file to load
+// Using setTimeout()
 
-// Before promises, we used callback functions to handle this — but they often led to callback hell 
+// Before promises, we used callback functions to handle this — but they often led to callback hell
 
 // Syntax -
 // const promise = new Promise(function (resolve, reject) {
-  // async task
+// async task
 // });
 
 // Promise States
@@ -20,7 +20,6 @@
 // | `pending`   | Still waiting                        |
 // | `fulfilled` | Successfully completed (`resolve`)   |
 // | `rejected`  | Failed with an error (`reject`)      |
-
 
 // | Argument  | Purpose                           |
 // | --------- | --------------------------------- |
@@ -42,6 +41,31 @@
 //     // failure
 //   });
 
+// What Are .then() and .catch() in Promises?
+
+// successfully → use .then()
+// with an error → use .catch()
+
+// Simple Example
+
+const myPromise = new Promise((resolve, reject) => {
+  const success = true;
+
+  if (success) {
+    resolve("Task Completed....");
+  } else {
+    reject("Task Rejected");
+  }
+});
+
+myPromise
+  .then(function (result) {
+    console.log(result);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
 // Why Promises are Better Than Callbacks:
 // | Callback Hell            | Promises                      |
 // | ------------------------ | ----------------------------- |
@@ -51,32 +75,64 @@
 
 // The Task - Get user info → Get orders for that user → Calculate total → Show total
 
-// Using Callbacks
-function getUser(callback) {
-  setTimeout(() => {
-    callback({ id: 1, name: "Kartik" });
-  }, 1000);
-}
+// 1. Using Callbacks
+// function getUser(callback) {
+//   setTimeout(() => {
+//     callback({ id: 1, name: "Kartik" });
+//   }, 1000);
+// }
 
-function getOrders(userId, callback) {
-  setTimeout(() => {
-    callback([100, 200, 300]);
-  }, 1000);
-}
+// function getOrders(userId, callback) {
+//   setTimeout(() => {
+//     callback([100, 200, 300]);
+//   }, 1000);
+// }
 
-function calculateTotal(orders, callback) {
-  setTimeout(() => {
-    const total = orders.reduce((a, b) => a + b, 0);
-    callback(total);
-  }, 1000);
-}
+// function calculateTotal(orders, callback) {
+//   setTimeout(() => {
+//     const total = orders.reduce((a, b) => a + b, 0);
+//     callback(total);
+//   }, 1000);
+// }
 
-// 👇 Callback Hell starts here
-getUser(function(user) {
-  getOrders(user.id, function(orders) {
-    calculateTotal(orders, function(total) {
-      console.log("Total is:", total); // 👉 "Total is: 600"
-    });
+// // Callback Hell starts here
+// getUser(function(user) {
+//   getOrders(user.id, function(orders) {
+//     calculateTotal(orders, function(total) {
+//       console.log("Total is:", total); // "Total is: 600"
+//     });
+//   });
+// });
+
+// 2. Using Promises
+function getUser() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ id: 1, name: "Kartik" });
+    }, 1000);
   });
-});
+}
 
+function getOrders(userId) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([100, 200, 300]);
+    }, 1000);
+  });
+}
+
+function calculateTotal(orders) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const total = orders.reduce((a, b) => a + b, 0);
+      resolve(total);
+    }, 1000);
+  });
+}
+
+// Chain Promises
+getUser()
+  .then(user => getOrders(user.id))
+  .then(orders => calculateTotal(orders))
+  .then(total => console.log("Total is:", total))  // 600
+  .catch(err => console.log("Error:", err));
