@@ -156,6 +156,17 @@
 
 // Promises Method
 // 2. Promise.all()
+const p1 = fetch('https://jsonplaceholder.typicode.com/posts/1');
+const p2 = fetch('https://jsonplaceholder.typicode.com/posts/2');
+
+Promise.all([p1, p2])
+  .then(responses => Promise.all(responses.map(r => r.json())))
+  .then(data => {
+    console.log('Post 1:', data[0]);
+    console.log('Post 2:', data[1]);
+  })
+  .catch(error => console.error('One or more requests failed:', error));
+
 // Promise.race()
 const slow = new Promise(res => setTimeout(() => res('Slow'), 2000));
 const fast = new Promise(res => setTimeout(() => res('Fast'), 1000));
@@ -173,10 +184,10 @@ Promise.race([slow, fast]).then(result => console.log(result)); // 👉 Fast
 // });
 
 // 5. Promise.any() 
-const p1 = Promise.reject("Fail");
-const p2 = Promise.resolve("Win");
-const p3 = Promise.resolve("Also Win");
+// const p1 = Promise.reject("Fail");
+// const p2 = Promise.resolve("Win");
+// const p3 = Promise.resolve("Also Win");
 
-Promise.any([p1, p2, p3])
-  .then(result => console.log(result)) // 👉 "Win"
-  .catch(error => console.log('All failed:', error));
+// Promise.any([p1, p2, p3])
+//   .then(result => console.log(result)) // 👉 "Win"
+//   .catch(error => console.log('All failed:', error));
