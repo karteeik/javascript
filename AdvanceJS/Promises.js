@@ -157,5 +157,10 @@
 // Promises Method
 // 2. Promise.all()
 // Promise.race()
+const slow = new Promise(res => setTimeout(() => res('Slow'), 2000));
+const fast = new Promise(res => setTimeout(() => res('Fast'), 1000));
+
+Promise.race([slow, fast]).then(result => console.log(result)); // 👉 Fast
+
 //  Promise.allSettled()
 // 5. Promise.any() (✅ ES2021)
