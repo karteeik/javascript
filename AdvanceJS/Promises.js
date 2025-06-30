@@ -53,27 +53,27 @@
 
 // Simple Example
 
-const myPromise = new Promise((resolve, reject) => {
-  const success = false;
+// const myPromise = new Promise((resolve, reject) => {
+//   const success = false;
 
-  if (success) {
-    resolve("Task Completed....");
-  } else {
-    reject("Task Rejected");
-  }
-});
+//   if (success) {
+//     resolve("Task Completed....");
+//   } else {
+//     reject("Task Rejected");
+//   }
+// });
 
-// if you'e add directlly atteched to creation of promises
-myPromise
-.then(function (result) {
-    console.log(result);
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-  .finally(function (){
-    console.log("This part is Finally Execute");
-  })
+// // if you'e add directlly atteched to creation of promises
+// myPromise
+// .then(function (result) {
+//     console.log(result);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   })
+//   .finally(function (){
+//     console.log("This part is Finally Execute");
+//   })
 
 // Why Promises are Better Than Callbacks:
 // | Callback Hell            | Promises                      |
@@ -114,34 +114,48 @@ myPromise
 // });
 
 // 2. Using Promises
-function getUser() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({ id: 1, name: "Kartik" });
-    }, 1000);
-  });
-}
+// function getUser() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve({ id: 1, name: "Kartik" });
+//     }, 1000);
+//   });
+// }
 
-function getOrders(userId) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve([100, 200, 300]);
-    }, 1000);
-  });
-}
+// function getOrders(userId) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve([100, 200, 300]);
+//     }, 1000);
+//   });
+// }
 
-function calculateTotal(orders) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const total = orders.reduce((a, b) => a + b, 0);
-      resolve(total);
-    }, 1000);
-  });
-}
+// function calculateTotal(orders) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       const total = orders.reduce((a, b) => a + b, 0);
+//       resolve(total);
+//     }, 1000);
+//   });
+// }
 
-// Chain Promises
-getUser()
-  .then(user => getOrders(user.id))
-  .then(orders => calculateTotal(orders))
-  .then(total => console.log("Total is:", total))  // 600
-  .catch(err => console.log("Error:", err));
+// // Chain Promises
+// getUser()
+//   .then(user => getOrders(user.id))
+//   .then(orders => calculateTotal(orders))
+//   .then(total => console.log("Total is:", total))  // 600
+//   .catch(err => console.log("Error:", err));
+
+// Using Promises fetch data
+
+// async function getUserData() {
+//   let showData = await fetch('https://jsonplaceholder.typicode.com/posts');
+//   console.log(await showData.json()); 
+// }
+// getUserData();
+
+// Promises Method
+// 2. Promise.all()
+// Promise.race()
+//  Promise.allSettled()
+// 5. Promise.any() (✅ ES2021)
