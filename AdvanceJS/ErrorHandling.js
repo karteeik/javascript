@@ -36,7 +36,20 @@ fetch("https://icanhazdadjoke.com/", {
   });
 
 // 3. Using try...catch with async/await
-(async () => {
+// (async () => {
+//   try {
+//     const response = await fetch("https://icanhazdadjoke.com/", {
+//       headers: { Accept: "application/json" },
+//     });
+//     const data = await response.json();
+//     console.log(data.joke);
+//   } catch (error) {
+//     console.log("Fetch Failed:", error.message);
+//   }
+// })();
+
+// async FAT ARROW Function
+const fetchData = async () => {
   try {
     const response = await fetch("https://icanhazdadjoke.com/", {
       headers: { Accept: "application/json" },
@@ -46,4 +59,5 @@ fetch("https://icanhazdadjoke.com/", {
   } catch (error) {
     console.log("Fetch Failed:", error.message);
   }
-})();
+}
+fetchData();
