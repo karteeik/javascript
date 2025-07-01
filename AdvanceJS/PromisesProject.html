@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promises Project</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome To Dad Jokes</h1>
+      <button id="fetchJoke">Get another Joke</button>
+      <section class="apiBody"></section>
+    </div>
+
+    <script>
+      const apiBody = document.querySelector(".apiBody");
+
+      //   const apiURL = "https://jsonplaceholder.typicode.com/posts";
+      const apiURL = "https://icanhazdadjoke.com/";
+      // How to Get Data To API
+      // To make HTTP request - ok: true and status: 200 it means api is fullfill
+
+    //   const toGetJoke = () => {
+    //     fetch(apiURL, {
+    //       headers: {
+    //         Accept: "application/json",
+    //       },
+    //     })
+    //       .then((responce) => {
+    //         console.log(responce);
+    //         return responce.json();
+    //       })
+    //       .then((data) => {
+    //         // console.log(data.joke);
+    //         apiBody.innerHTML = data.joke;
+    //       })
+    //       .catch((error) => {
+    //         console.log("Error fetching joke: ", error);
+    //       });
+    //   };
+
+      //  Using async await
+
+      async function toGetJoke() {
+        const res = await fetch(apiURL, {
+          headers: {
+            Accept: "application/json",
+          },
+        });
+        const data = await res.json();
+        console.log(data.joke);
+        apiBody.innerHTML = data.joke;
+      }
+
+      document.getElementById("fetchJoke").addEventListener("click", toGetJoke);
+    </script>
+  </body>
 </html>
