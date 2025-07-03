@@ -131,7 +131,8 @@
         const today = new Date(TodayDate);
 
         if (today < dob) {
-          result.innerHTML = "❗ 'Age at the Date of' must be after Date of Birth";
+          result.innerHTML =
+            "❗ 'Age at the Date of' must be after Date of Birth";
           return;
         }
 
@@ -141,7 +142,7 @@
 
         if (days < 0) {
           months--;
-          days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();          
+          days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
         }
 
         if (months < 0) {
@@ -149,7 +150,7 @@
           months += 12;
         }
 
-        result.innerHTML = `🎉 Your Age is <strong>${years}</strong> Years, <strong>${months}</strong> Months, and <strong>${days}</strong> Days`;
+        result.innerHTML = ` Your Age is <strong>${years}</strong> Years, <strong>${months}</strong> Months, and <strong>${days}</strong> Days`;
       };
 
       document
