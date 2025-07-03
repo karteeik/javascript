@@ -20,7 +20,7 @@ try {
 try {
   const name = "Karik";
   console.log(name.toUpperCase());
-  let result = 10 / a; // ❌ 'a' is not defined
+  let result = 10 / a; // 'a' is not defined
 } catch (error) {
   console.log("An error occurred:", error.message);
 }
