@@ -100,6 +100,19 @@ console.log(d.getSeconds());
 console.log(d.getMilliseconds());        
 console.log(d.getTime());        // it's returns the number of milliseconds since January 1, 1970:
 
+// new Date(year, month, 0).getDate()
+// year: Full year (e.g., 2025)
+// monthIndex: 0-based month (January = 0, December = 11)
+// day: Day of the month (starts at 1)
+
+// If you pass 0 as the day, JavaScript goes back to the last day of the previous month.
+
+const daysInApril = new Date(2025, 4, 0).getDate(); // 30
+const daysInFebruary = new Date(2024, 2, 0).getDate(); // 29 (leap year!)
+console.log(daysInApril);
+console.log(daysInFebruary);
+
+
 // You cannot use it on a date object like myDate.now().
 // syntax - Date.now().
 console.log(Date.now());    // same as gettime 
