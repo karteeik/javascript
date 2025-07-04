@@ -44,9 +44,9 @@ for(let i in frds)
 // });
 
 let frdsw=["raj","mohan","rahul","pavan","madhur"];
-// frdsw.forEach(function(currentele,index,arr){
-//     console.log(`${currentele} ${index}`)
-// });
+frdsw.forEach(function(currentele,index,arr){
+    console.log(`${currentele} ${index} ${arr}`)
+});
 
 // fat arrow uses
 //arr.forEach((cur_value,index,array)=>{
@@ -102,13 +102,13 @@ console.log(myMethod);
 
 // (5)- splice() method : instants method of an array removing,replcing,adding
 // syntax - splice(start_index,delete_count,iteams)
-// console.log(myMethod.splice()) //return an empty array
-// myMethod.splice(1,2,"krishna")
-// console.log(myMethod);
+console.log(myMethod.splice()) //return an empty array
+myMethod.splice(1,2,"krishna")
+console.log(myMethod);
 
 // searching & filtering an array
 // (1)indexof(searchElement)- it returns index value of element
-const nummbers=[1,2,3,4,5,6,4,8];
+const nummbers=[1,2,4,7,5,6,4,9,8];
 console.log(nummbers.indexOf(4)) //3
 // (2)includes(searchElemenet,fromIndex-(search where to start)) -it returns element is exists or not.
 console.log(nummbers.includes(4,3));
