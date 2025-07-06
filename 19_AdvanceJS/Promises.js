@@ -54,27 +54,27 @@
 
 // Simple Example
 
-// const myPromise = new Promise((resolve, reject) => {
-//   const success = false;
+const myPromise = new Promise((resolve, reject) => {
+  const success = false;
 
-//   if (success) {
-//     resolve("Task Completed....");
-//   } else {
-//     reject("Task Rejected");
-//   }
-// });
+  if (success) {
+    resolve("Task Completed....");
+  } else {
+    reject("Task Rejected");
+  }
+});
 
-// // if you'e add directlly atteched to creation of promises
-// myPromise
-// .then(function (result) {
-//     console.log(result);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   })
-//   .finally(function (){
-//     console.log("This Part is Always Executed...");
-//   })
+// if you'e add directlly atteched to creation of promises
+myPromise
+.then(function (result) {
+    console.log(result);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function (){
+    console.log("This Part is Always Executed...");
+  })
 
 // Why Promises are Better Than Callbacks:
 // | Callback Hell            | Promises                      |
@@ -210,11 +210,11 @@ const promise3 = new Promise((resolve, reject) => {
 
 // This is long process but we use all method
 
-// Promise.all([promise1,promise2, promise3]).then((result) => {
-//   console.log(result);
-// }).catch((error) => {
-//   console.log(error);
-// });
+Promise.all([promise1,promise2, promise3]).then((result) => {
+  console.log(result);
+}).catch((error) => {
+  console.log(error);
+});
 
 // Note - setTimeout Limit is Maximum 
 
@@ -229,7 +229,7 @@ Promise.allSettled([promise1,promise2, promise3]).then((result) => {
 // 3. Promise.race()
 // Returns the first settled (fulfilled or rejected) promise.
 const slow = new Promise(resolve => setTimeout(() => resolve("Slow"), 2000));
-const fast = new Promise(resolve => setTimeout(() => resolve("Fast"), 1000));
+const fast = new Promise(reject => setTimeout(() => resolve("Fast"), 1000));
 
 Promise.race([slow, fast]).then(result => {
   console.log(result); // "Fast"
@@ -237,10 +237,10 @@ Promise.race([slow, fast]).then(result => {
 
 // 5. Promise.any()
 // it's Return First Successfull Result
-// const p1 = Promise.reject("Fail");
-// const p2 = Promise.resolve("Win");
-// const p3 = Promise.resolve("Also Win");
+const p1 = Promise.reject("Fail");
+const p2 = Promise.resolve("Win");
+const p3 = Promise.resolve("Also Win");
 
-// Promise.any([p1, p2, p3])
-//   .then(result => console.log(result)) // "Win"
-//   .catch(error => console.log('All failed:', error));
+Promise.any([p1, p2, p3])
+  .then(result => console.log(result)) // "Win"
+  .catch(error => console.log('All failed:', error));

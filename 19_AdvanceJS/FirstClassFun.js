@@ -68,5 +68,3 @@ greetUser(sayHello);    // Here, sayHello is Callback Function and greetUser is 
 // Why use callbacks?
 // To run code after something finishes Like a delay, animation, or fetch
 // To make code flexible You can give any function as a callback
-
-
