@@ -63,17 +63,19 @@ Then, the event bubbles back up from the target to the top (document).
     -->
 
     <script>
-      document.getElementById("parent").addEventListener("click", (e) => {
+      document.getElementById("parent").addEventListener("click", () => {
         console.log("Parent clicked");
-        e.stopPropagation();
-      });
+        // e.stopPropagation();
+      },true);
+
+      // true parameter for capturing phase
 
       document.getElementById("child").addEventListener("click", () => {
         console.log("Child clicked");
-      });
+      },true);
 
-      document.getElementById("btn").addEventListener("click", (event) => {
-        event.stopPropagation();
+      document.getElementById("btn").addEventListener("click", () => {
+        // event.stopPropagation();
         console.log("Btn clicked");
       });
     </script>
