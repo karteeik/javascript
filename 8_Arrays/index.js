@@ -142,7 +142,7 @@ console.log(typeof myFindIndex); //output - number
 // we use fat arrow function with one argument
 const myFilter=posNumbers.filter(currentele=> currentele > 5);
 const myFilter1=posNumbers.filter(currentele=> currentele > 52);
-console.log(myFilter);
+console.log("filter : ",myFilter);
 console.log(myFilter1); //return empty array bcos not found an element
 
 // example1 - In e-commerce website when we want to delete or remove any product from addtocart page....

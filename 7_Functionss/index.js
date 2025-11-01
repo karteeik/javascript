@@ -27,10 +27,10 @@
 // show(2,3);
 
 // default parameter
-// function sum(a,b=10){  //default parameter          
-//     console.log(a+b);
-// }
-// sum(5,15);
+function sum(a,b=10){  //default parameter          
+    console.log(a+b);
+}
+sum(5,15);
 
 // IIFE - (immedately invoked function expression)
 

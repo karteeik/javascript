@@ -31,14 +31,14 @@ f **= 3; //f = f ** 3; f is now 8
 // console.log(10%5)  
 
 // (3) comparison operator - return true or false
-// console.log(5==5)
-// console.log(5==="5")
-// console.log(5!=5)
-// console.log(5!==5)
-// console.log(5<6)
-// console.log(5>6)
-// console.log(5>=6)
-// console.log(5<=5)
+console.log(5==5)
+console.log(5==="5")
+console.log(5!=5)
+console.log(5!==5)
+console.log(5<6)
+console.log(5>6)
+console.log(5>=6)
+console.log(5<=5)
 
 // (4) logical operator (logical and-&& , logical or-|| , logical not-!)
 // console.log( 5>3 && 3<5 )
@@ -46,9 +46,10 @@ f **= 3; //f = f ** 3; f is now 8
 // console.log( 5>9 || 7!=5 )
 
 // (5) string operator
-// var str1="hello";
-// var str2="world";
-// console.log(str1+" "+str2)
+var str1="hello";
+var str2="world";
+console.log(str1+" "+str2)
+console.log(str1+str2)
 
 // var age=50;
 // console.log("age : "+age)

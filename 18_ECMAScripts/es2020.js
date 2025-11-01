@@ -29,8 +29,9 @@ console.log(findOne);
 
 // 2. Nullish Coalescing Operator (??)
 // Provides a default value only when the left side is null or undefined.
+// it returns right hand side value when left hand operand is null or undefined, otherwise its return left hand operand
 
-const age = 28;
+const age = 0;
 
 console.log(age || 18);   // 18  (because 0 is falsy)
 console.log(age ?? 18);   // 0  (only checks for null or undefined)
