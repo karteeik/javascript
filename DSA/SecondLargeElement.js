@@ -15,4 +15,9 @@ for (let i = 0; i < arr.length; i++) {
     secondLargestElement = arr[i];
   }
 }
-console.log("Second Largest Element is : ", secondLargestElement);
+
+if (secondLargestElement === 0) {
+  console.log("No, Any Second Largest Element. All Element are Same");
+} else {
+  console.log("Second Largest Element is : ", secondLargestElement);
+}

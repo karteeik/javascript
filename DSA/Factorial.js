@@ -13,12 +13,13 @@ console.log(factorial(5));
 // Using Recursion
 
 const factorialUsingRecursion = (n) => {
-  if (n === 0) return;
-  return n * factorial(n - 1);
+  if (n < 0) return "Invalid input";
+  if (n === 0 || n === 1) return 1;
+  return n * factorialUsingRecursion(n - 1);
 };
 
 console.log(factorialUsingRecursion(5));
 
 // One Line Factorial
-const factorialOne = n => (n === 0 ? 1 : n * factorialOne(n - 1));
+const factorialOne = n => (n === 0 || n === 1 ? 1 : n * factorialOne(n - 1));
 console.log(factorialOne(5));
