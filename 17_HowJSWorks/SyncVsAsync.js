@@ -6,6 +6,8 @@
 // JS can handle long tasks (like API calls, timers, file reading) without waiting for them to finish.
 // Instead, it uses callbacks, promises, or async/await to continue running other code while the task finishes in the background.
 
+// JavaScript is synchronous and single-threaded, but it can perform asynchronous operations using the event loop and runtime APIs.
+
 //  Feature          | Synchronous JS      | Asynchronous JS                          
 //  ---------------------------------------------------------------------------------- 
 //  Execution Order  | One line at a time  | Can skip waiting tasks                   

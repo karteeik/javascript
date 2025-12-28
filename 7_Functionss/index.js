@@ -1,4 +1,4 @@
-// function is block of reusable code.
+// A function in JavaScript is a reusable block of code designed to perform a specific task. It helps in code reusability, modularity, and readability
 // function sum(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) /*parameters*/{
 //     return a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q+r+s+t+u+v+w+x+y+z;
 // }
@@ -27,10 +27,11 @@
 // show(2,3);
 
 // default parameter
-function sum(a,b=10){  //default parameter          
-    console.log(a+b);
+function sum(a, b = 10) {
+  //default parameter
+  console.log(a + b);
 }
-sum(5,15);
+sum(5, 15);
 
 // IIFE - (immedately invoked function expression)
 
@@ -49,35 +50,39 @@ sum(5,15);
 // })();
 // console.log(result)
 
-(function(a,b){
-    console.log(a+b);
-})(61,26);
+(function (a, b) {
+  console.log(a + b);
+})(61, 26);
 
-let show=(function(a,b){
-    return a+b;
-})(12,32);
+let show = (function (a, b) {
+  return a + b;
+})(12, 32);
 
 console.log(show);
 
 // fat arrow function
 // syntax- const functionName = (parameter1, parameter2, ...) => {
-    // Function body
+// Function body
 // };
 
 // (i) - you don't need to write function keyword
-const select = (a,b) => {
-    console.log(a+b);
+const select = (a, b) => {
+  console.log(a + b);
 };
-select(21,23);
+select(21, 23);
 
 // it's one line function
 // const result=(a,b)=>`${a} and ${b} sum is ${a+b}`;
 // console.log(result(2,33));
 
 // (ii) - if you passed one parameter in fat arrow function than no need to show parentheses()
-const sqr = a =>{ console.log(`sqr is ${a*a}`) };
+const sqr = (a) => {
+  console.log(`sqr is ${a * a}`);
+};
 sqr(10);
 
 //(iii) - if you have passed no argument than only show parentheses()
-const greet = () => {console.log("hello, world")};
+const greet = () => {
+  console.log("hello, world");
+};
 greet();

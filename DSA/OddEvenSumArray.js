@@ -4,7 +4,8 @@ let oddSum = 0;
 let evenSum = 0;
 
 for(let i=0; i<arr.length; i++){
-    if(arr[i]%2==0){
+    // when positon i%2==0 and when element arr[i]%2==0
+    if(i%2==0){
         evenSum+=arr[i];
     }else{
         oddSum+=arr[i];
